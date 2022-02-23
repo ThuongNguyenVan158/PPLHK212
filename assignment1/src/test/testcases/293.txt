@@ -1,0 +1,26 @@
+
+        Class Shape {
+            Var $length,$width: Int;
+            getArea() {}
+            Shape(length:Int;width:Int){
+                Self.length = "length";
+                Self.width = width;
+            }
+        }
+        Class Rectangle : Shape {
+            getArea(){
+            Return Self.length*Self.width;
+            }
+        }
+        Class Triangle : Shape {
+            getArea(){
+            Return Self.length*Self.width / 2;
+            }
+        }
+        Class Example2 {
+            main(){
+            s = New Rectangle(3,4);
+            (b.coo().d.ass()).o();
+            }
+        }
+        

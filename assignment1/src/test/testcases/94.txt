@@ -1,0 +1,13 @@
+
+        Class ID {
+            Var total: Int=0;
+           Val name: String= Null;
+            Contructor(){
+                Self.name=Null;
+            }
+            Contructor(name: String){
+                Self.name=name;
+                ID.total = ID.total +1;
+            }
+        }
+        

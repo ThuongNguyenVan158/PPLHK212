@@ -1,0 +1,27 @@
+
+        Class Node{
+        Var value: Int=0;
+        Var nextNode: Node=Null;
+        Constructor(value:Int;next:Node){
+            Self.value=value;
+            Self.Node=next;
+        }
+        Constructor(value:Int){
+            Self.value=value;
+        }
+    }
+
+Class LinkList{}
+Class Stack{
+    Var stack: LinkList=New LinkList();
+    push(el:Int){
+        stack.append(el);
+    }
+    pop(){
+        stack.Delete(stack.length-1);
+    }
+    top(){
+        Return stack.tail.value;
+    }
+}
+        

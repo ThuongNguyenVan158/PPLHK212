@@ -1,0 +1,8 @@
+
+        Class A{
+            $1Id(){
+                Return 1&&2||1*5;
+            }
+            Self::$1Id();
+        }
+        

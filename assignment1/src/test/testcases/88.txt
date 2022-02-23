@@ -1,0 +1,13 @@
+
+        Class Desk {
+            Val length,width: Int = 0,0;
+            getArea() {
+                Return Self.length* Self.width;
+                }
+
+            Contructor(length : Int;width: Int){
+            Self.length = length;
+            Self.width = width;
+            }
+        }
+            

@@ -1,0 +1,8 @@
+
+        Class student {
+            getID(name:String){
+                Self.name=name;
+                name = New True();
+            }
+        }
+        

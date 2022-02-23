@@ -1,0 +1,14 @@
+
+        Class Operator
+        {
+            Var a=0: Int;
+            main
+            {
+                Foreach() i In 1 .. 100 ){
+                    If (i==2) {Break;}
+                    Else {a = a++}
+                }
+            }
+        }
+
+        

@@ -1,0 +1,23 @@
+
+         Class Test {
+            print(x: Int)
+            {
+                Self.x();
+            }
+            main()
+            {
+                Val x: Int= 100+1;
+                Foreach( h In 1 .. x+1 By x-1)
+                {
+                    If(x%2 == 0)
+                    {
+                        Self.print(x);
+                    }
+                    Else {Continue;}
+                    Break;
+                }
+            }
+        }
+
+
+        

@@ -1,0 +1,10 @@
+
+        Class Operator {
+            Val x,y : Int;
+            mul(){
+                Return New X();
+            }
+            main(x,y:Int){
+            }
+            }
+        

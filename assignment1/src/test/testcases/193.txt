@@ -1,0 +1,7 @@
+
+            class Rectangle : Shape {
+            float getArea(){
+            return length*width;
+            }
+            }
+                

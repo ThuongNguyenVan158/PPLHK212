@@ -1,0 +1,12 @@
+
+        ## Class Myself {
+            Val firstName: String = "Nguyen"; 
+            Val lastName : String = "Van Thuong";  
+            Var age : Int = 20+1;        
+
+            fullname() {
+
+            }
+        }
+        };##
+        

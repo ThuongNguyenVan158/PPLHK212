@@ -1,0 +1,9 @@
+
+        Class Parent {
+            Var p: Int = X();
+        }
+        Class Child : Parent {
+            Var c;
+        }
+
+        

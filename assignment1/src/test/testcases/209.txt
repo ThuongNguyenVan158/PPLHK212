@@ -1,0 +1,9 @@
+
+        Class Example {
+            Val arr : Array[Int,1];
+            Test(){
+               Self.arr[0] = 1;
+            }
+        }
+
+        

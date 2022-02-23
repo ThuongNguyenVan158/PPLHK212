@@ -1,0 +1,22 @@
+        
+        Class Shape {
+           Contructor(){}
+        }
+        Class Rectangle : Shape {
+           getArea(){
+            x.b[2] = x.m()[3];
+            }
+        }
+        Class Triangle : Shape {
+            getArea(){
+            Return Self.length*Self.width / 2;
+            }
+        }
+        Class Example2 {
+            main(){
+            s = New Rectangle(3,4);
+            io.writeVarLn(s.getArea());
+            s = New Triangle(3,4);
+            io.writeVarLn(s.getArea());
+            }
+        }

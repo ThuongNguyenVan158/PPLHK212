@@ -1,0 +1,13 @@
+
+        Class Test {
+            Testfunc (x: Float)
+            {
+                Return  x*x*x+x*2 ;
+            }
+            main()
+            {
+                Var i : Int = 1;
+                Return Testfunc(i);
+            }
+        }
+        

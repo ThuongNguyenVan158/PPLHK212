@@ -1,0 +1,15 @@
+
+        Class Shape {
+            Var length,width;
+           getArea() {x::1;}
+            Shape(length,width){
+                Self.length = length;
+                Self.width = width;
+            }
+        }
+        Class Rectangle : Shape {
+            getArea(){
+                Return Self.length*Self.width;
+            }
+        }
+        

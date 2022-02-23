@@ -1,0 +1,10 @@
+
+        Class Operator
+        {
+            $main()
+            {
+                Return Other.prVar("Self is result").x;
+            }
+        }
+
+        

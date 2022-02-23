@@ -1,0 +1,26 @@
+
+        Class Node{
+        Var value: Int=0;
+        Var nextNode: Node=Null;
+        Constructor(value:Int;next:Node){
+            Self.value=value;
+            Self.Node=next;
+        }
+        Constructor(value:Int){
+            Self.value=value;
+        }
+    }
+
+Class LinkList{
+    Var head,tail: Node = Null,Null;
+    Var length: Int=0;
+    Destructor(){ 
+        Foreach(i In 0 .. Self.length-1){
+            Var temp:Node=head;
+            head= head.nextNode;
+            ulities.delete(temp);
+        }
+    }
+}
+
+        

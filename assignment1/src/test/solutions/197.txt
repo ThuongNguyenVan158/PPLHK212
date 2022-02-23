@@ -1,0 +1,1 @@
+Var,a,:,String,=,Hello world \t Hello World ,<EOF>

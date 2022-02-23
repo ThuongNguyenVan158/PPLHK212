@@ -1,0 +1,13 @@
+
+        Class sinhvien
+        {
+            Val masinhvien, ten, quequan : Int;
+            Var tuoi : Int;
+            Var diemtoan, diemly, diemhoa: Int;
+            di(){};
+            dung(){};
+            ngoi(){};
+            hoctap(){};
+        }
+
+        

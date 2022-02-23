@@ -1,0 +1,6 @@
+
+        Class Test {
+            Val x: Int = y;
+        }
+
+        

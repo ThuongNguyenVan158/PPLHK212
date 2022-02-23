@@ -1,0 +1,6 @@
+
+       Class Test {
+            Val $Var : Int = check()New A();
+        }
+
+        

@@ -1,0 +1,10 @@
+
+        Class Operator
+        {
+            main()
+            {
+                Return Other.prVar("Self is result").prVar1("Self is result1").prVar2("Self is result2");
+            }
+        }
+
+        

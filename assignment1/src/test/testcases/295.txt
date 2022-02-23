@@ -1,0 +1,8 @@
+
+        Class ID {
+            ID(name:String){
+                Self.name=name;
+                ID.total = ID.total.X() +1;
+            }
+        }
+        

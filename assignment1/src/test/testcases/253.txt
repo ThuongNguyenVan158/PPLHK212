@@ -1,0 +1,9 @@
+
+         Class Test {
+            main ()
+            {
+                a = (!(a && b || c) && c + x);
+                b!= a || b;
+            }
+        }
+        

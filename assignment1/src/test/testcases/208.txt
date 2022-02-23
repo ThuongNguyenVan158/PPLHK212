@@ -1,0 +1,12 @@
+
+        Class A{
+            Val a, b, c: Int;
+            Var x, y, z : Float;
+            Var g, h, y : String;
+            Test(){}
+            Var x, y, z: String;
+            Var q, w,e : float = 12.,.12e1,.123E0;
+            Val a: Int = 0b01;
+        ##Have one comment in here hihi##
+        }
+        

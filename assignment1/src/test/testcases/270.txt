@@ -1,0 +1,15 @@
+
+        Class Test
+        {
+            main(){
+                Return "Val";
+            }
+            mainVar(){
+                Return 1;
+            }
+            mainVar(){
+                Return 1.0;
+            }
+        }
+
+        

@@ -1,0 +1,8 @@
+
+        Class Test {
+            Val $Var : Int = New A();
+            a= $Var+1;
+        }
+
+
+        

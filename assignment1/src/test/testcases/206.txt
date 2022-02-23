@@ -1,0 +1,14 @@
+
+        Class Shape{
+           
+        }
+        Class Triangle : Shape {
+            Val $len,$width : Int = 0,0;
+            getArea(){
+                {
+                    
+                }
+                Return Self.length*Self.width / 2;
+            }
+        }
+            

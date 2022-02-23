@@ -1,0 +1,24 @@
+
+        Class Node{
+        Var value: Int=0;
+        Var nextNode: Node=Null;
+        Constructor(value:Int;next:Node){
+            Self.value=value;
+            Self.Node=next;
+        }
+        Constructor(value:Int){
+            Self.value=value;
+        }
+    }
+
+Class LinkList{}
+Class Queue{
+    Var queue: LinkList=New LinkList();
+    push(el:Int){
+        queue.append(el);
+    }
+    pop(){
+        stack.Delete(0);
+    }
+}
+        

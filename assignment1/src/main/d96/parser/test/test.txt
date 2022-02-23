@@ -1,0 +1,5 @@
+Class Test {
+    main(){
+            foreach true;
+        }
+}

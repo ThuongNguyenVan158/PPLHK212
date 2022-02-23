@@ -1,0 +1,10 @@
+
+        Class Test {
+            main ()
+            {
+                Var a : Array[Array[Int,1],1];
+                a = [2]b;
+            }
+        }
+
+        

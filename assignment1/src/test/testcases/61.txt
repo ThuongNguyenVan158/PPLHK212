@@ -1,0 +1,26 @@
+
+        Class Vehicle
+        {
+            Vehicle()
+            {
+                io.writeVarLn("Self is a Vehicle");
+            }
+        }
+
+        Class FourWheeler : Vehicle
+        {
+            FourWheeler()
+            {
+                io.writeVarLn("Self is a 4 wheeler Vehicle");
+            }
+        }
+
+        Class Car : FourWheeler
+        {
+            Car()
+            {
+                io.writeVarLn("Self is a car");
+            }
+        }
+
+        

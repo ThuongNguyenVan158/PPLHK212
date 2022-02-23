@@ -1,0 +1,9 @@
+
+        Class Example {
+            Test(){
+                Foreach(i In 1+1 .. 100+1) {
+                    x=x+x==x;
+                }
+                }
+        }
+        

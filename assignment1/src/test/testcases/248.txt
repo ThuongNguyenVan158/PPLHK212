@@ -1,0 +1,11 @@
+
+        Class Test {
+                main(){
+                    a = a + 1;
+                }
+                main(){
+                    a = void + 1;
+                }
+        }
+
+        

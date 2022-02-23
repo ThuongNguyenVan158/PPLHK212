@@ -1,0 +1,3 @@
+
+            $id char_id float_id _ string_id classId
+                

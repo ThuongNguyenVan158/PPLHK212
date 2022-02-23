@@ -1,0 +1,13 @@
+
+        Class Test {
+            abc(){
+                a.abc();
+            }
+            abc(){
+                abc = abc();
+            }
+            abc(){
+                x=abc()*abc();
+            }
+        }
+        

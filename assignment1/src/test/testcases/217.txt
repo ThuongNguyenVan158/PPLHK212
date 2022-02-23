@@ -1,0 +1,8 @@
+
+        Class Test {
+            ABC(c: Float){
+                Var $s: Int =0;
+                S=1;
+            }
+        }
+        

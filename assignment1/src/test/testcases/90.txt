@@ -1,0 +1,14 @@
+
+        Class A{
+            Val str: String = "My name is Thuong";
+            $SayHello()
+            {
+                Return "Nice to meet you" + Self.str ;
+            }
+        }
+        Class B: A {
+           main(){
+            Val x : A = New A();
+            x::$SayHello();
+        }}
+        
