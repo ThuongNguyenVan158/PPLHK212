@@ -77,7 +77,7 @@ variable_init_value: ID CM variable_init_value CM exp | ID Extended data_type AS
 
 assign_stm: leftassign ASSIGN exp SM;
 leftassign: scalarvar | indexed_exp;
-scalarvar: ID | exp | ID SC DOLLARID ((index_operator)* | ('.' ID)+ ) | (SELF '.')? ID (index_operator)* | SELF? ID ('.' ID)+ ; // check is need $
+scalarvar: ID | exp DOT ID | ID DOT ID | exp6; // check is need $
 indexed_exp: exp index_operator | exp;
 
 if_stm: IF LP exp RP blockstatment elseif_stms else_stm;
@@ -116,7 +116,7 @@ exp3: exp3 (MUL | DIV | MOD) exp4 | exp4;
 exp4: NOT exp4 | exp5;
 exp5: SUB exp5 | exp6;
 exp6: exp6 index_operator | exp7;
-exp7: exp7 DOT (ID| func_call | LB exp RB | ID index_operator) | exp8;
+exp7: exp7 DOT (ID| func_call) | exp8;
 exp8: ID SC static_operand | exp9;
 exp9: NEW func_call| exp10;
 exp10: literal| TRUE | FALSE | ID | SELF | ID SC DOLLARID | LP exp RP; // check is have self

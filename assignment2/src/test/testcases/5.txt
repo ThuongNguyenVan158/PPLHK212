@@ -1,0 +1,4 @@
+Class Shape:Vu {
+                        Val a: Int ;
+                        
+                    }

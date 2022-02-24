@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),Id(Vu),[[AttributeDecl(kind='Instance', decl=ConstDecl(constant=Id(name='a'), constType=<AST.IntType object at 0x000002AA2F830100>, value=None))]])])

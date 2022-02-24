@@ -43,12 +43,12 @@ class ASTGeneration(D96Visitor):
         if ctx.VAR():
             attdecl = []
             if len(attlist[0]) == 3:
-                for i in len(attlist):
+                for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
                         attdecl += [AttributeDecl(Instance(), VarDecl(attlist[i][0], attlist[i][2]))]
                     else: attdecl += [AttributeDecl(Static(), VarDecl(attlist[i][0], attlist[i][2]))]
             else: 
-                for i in len(attlist):
+                for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
                         attdecl += [AttributeDecl(Instance(), VarDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
                     else: attdecl += [AttributeDecl(Static(), VarDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
@@ -56,12 +56,12 @@ class ASTGeneration(D96Visitor):
         elif ctx.VAL():
             constattdecl = []
             if len(attlist[0]) == 3:
-                for i in len(attlist):
+                for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
                         constattdecl += [AttributeDecl(Instance(), ConstDecl(attlist[i][0], attlist[i][2]))]
                     else: constattdecl += [AttributeDecl(Static(), ConstDecl(attlist[i][0], attlist[i][2]))]
             else: 
-                for i in len(attlist):
+                for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
                         constattdecl += [AttributeDecl(Instance(), ConstDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
                     else: constattdecl += [AttributeDecl(Static(), ConstDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
@@ -81,9 +81,9 @@ class ASTGeneration(D96Visitor):
             explist = []
             vardecllist = []
             for i in range(len(initlist)):
-                idlist = idlist + initlist[i][0]
-                typlist = typlist + initlist[i][1]
-                explist = explist + initlist[len(initlist) - i -1][2]
+                idlist = idlist + [initlist[i][0]]
+                typlist = typlist + [initlist[i][1]]
+                explist = explist + [initlist[len(initlist) - i -1][2]]
             for i in range(len(initlist)):
                 vardecllist = vardecllist + [[idlist[i], typlist[i], typ, explist[i]]]
             return vardecllist
@@ -97,18 +97,12 @@ class ASTGeneration(D96Visitor):
         if ctx.att_init_value():
             id = self.visit(ctx.idname())
             expr = self.visit(ctx.exp())
-            return [(id[0], id[1], 'Int', expr)] + self.visit(ctx.variable_init_value())
+            return [[id[0], id[1], 'Int', expr]] + self.visit(ctx.variable_init_value())
         else:
             id = self.visit(ctx.idname())
             expr = self.visit(ctx.exp())
             typ = self.visit(ctx.data_type())
-            return [(id[0], id[1], typ, expr)]
-    # #values: value | ;
-    # def visitValues(self, ctx: D96Parser.ValuesContext):
-    #     return None
-    # #value: literal CM value | literal;
-    # def visitValue(self, ctx: D96Parser.ValueContext):
-    #     return None
+            return [[id[0], id[1], typ, expr]]
     #data_type: primitive_type | array_type | classtype;
     def visitData_type(self, ctx: D96Parser.Data_typeContext):
         if ctx.primitive_type():
@@ -167,7 +161,7 @@ class ASTGeneration(D96Visitor):
         return [Id(ctx.ID().getText())]
     #blockstatment: LB stamentlist RB; // mục 6.9
     def visitBlockstatment(self, ctx: D96Parser.BlockstatmentContext):
-        return self.visit(ctx.stamentlist())
+        return Block(self.visit(ctx.stamentlist()))
     #stamentlist: staments | ;
     def visitStamentlist(self, ctx: D96Parser.StamentlistContext):
         if ctx.staments():
@@ -304,26 +298,51 @@ class ASTGeneration(D96Visitor):
         return Assign(self.visit(ctx.leftassign()), self.visit(ctx.exp()))
     #leftassign: scalarvar | indexed_exp;
     def visitLeftassign(self, ctx: D96Parser.LeftassignContext):
-        return None
-    #scalarvar: ID | exp | ID SC DOLLARID ((index_operator)* | ('.' ID)+ ) | (SELF '.')? ID (index_operator)* | SELF? ID ('.' ID)+ ; 
+        if ctx.scalarvar():
+            return self.visit(ctx.scalarvar())
+        return self.visit(ctx.indexed_exp())
+    #scalarvar: ID | exp DOT ID | ID DOT ID | exp6; // check is need $
     def visitScalarvar(self, ctx: D96Parser.ScalarvarContext):
-        return None
+        if ctx.getChildCount() == 3:
+            if ctx.exp():
+                return FieldAccess(self.visit(ctx.exp(), Id(ctx.ID().getText())))
+            else: return FieldAccess(Id(ctx.ID(0).getText()), Id(ctx.ID(1).getText()))
+        if ctx.ID():
+            return Id(ctx.ID().getText())
+        return self.visit(ctx.exp6())
     #indexed_exp: exp index_operator | exp;
     def visitIndexed_exp(self, ctx: D96Parser.Indexed_expContext):
-        return None
+        if ctx.getChildCount() == 2:
+            listexp = self.visit(ctx.index_operator())
+            return ArrayCell(self.visit(ctx.exp()), listexp)
+        return self.visit(ctx.exp())
     #if_stm: IF LP exp RP blockstatment elseif_stms else_stm;
     def visitIf_stm(self, ctx: D96Parser.If_stmContext):
         expr = self.visit(ctx.exp())
         block = self.visit(ctx.blockstatment())
         elseiflist = self.visit(ctx.elseif_stms)
         elsestm = self.visit(ctx.else_stm())
-        return If(expr, block)
+        if not elseiflist:
+            if not elsestm:
+                return If(expr, block)
+            else: return If(expr, block, elsestm[0])
+        
+        temp = []
+        if not elsestm:
+            temp = [If(elseiflist[len(elseiflist)-1][0], elseiflist[len(elseiflist)-1][1])]
+        else: temp = [If(elseiflist[len(elseiflist)-1][0], elseiflist[len(elseiflist)-1][1], elsestm[0])]
+        for i in range(len(elseiflist) -1):
+            elseblock = [If(elseiflist[len(elseiflist)-i-1][0], elseiflist[len(elseiflist)-i-1][1], temp[0])]
+            temp = elseblock
+        return elseblock[0]
     #elseif_stms: elseif_stm elseif_stms | ;
     def visitElseif_stms(self, ctx: D96Parser.Elseif_stmsContext):
-            return None
+        if ctx.getChildCount() == 2:
+            return [self.visit(ctx.elseif_stm())] + self.visit(ctx.elseif_stms())
+        return []
     #elseif_stm: ELSEIF LP exp RP blockstatment;
     def visitElseif_stm(self, ctx: D96Parser.Elseif_stmContext):
-        return If(self.visit(ctx.exp()), self.visit(ctx.blockstatment()))
+        return [self.visit(ctx.exp()), self.visit(ctx.blockstatment())]
     #else_stm: ELSE blockstatment | ;
     def visitElse_stm(self, ctx: D96Parser.Else_stmContext):
         if ctx.getChildCount() == 2:
@@ -380,7 +399,9 @@ class ASTGeneration(D96Visitor):
 # /****************************************************************************/   
     #index_operator: LSB exp RSB | LSB exp RSB index_operator;
     def visitIndex_operator(self, ctx: D96Parser.Index_operatorContext):
-        return None
+        if ctx.getChildCount() == 3:
+            return [self.visit(ctx.exp())]
+        return [self.visit(ctx.exp())] + self.visit(ctx.index_operator())
     #exp: exp0 (ADDDOT | EQUALDOT) exp0 | exp0;
     def visitExp(self, ctx: D96Parser.ExpContext):
         if ctx.getChildCount() == 3:
@@ -418,16 +439,26 @@ class ASTGeneration(D96Visitor):
         return self.visit(ctx.getChild(0))
     #exp6: exp6 index_operator | exp7;
     def visitExp6(self, ctx: D96Parser.Exp6Context):
-        return None
-    #exp7: exp7 DOT (ID| func_call | LB exp RB | ID index_operator) | exp8;
+        if ctx.getChildCount() == 2:
+            listexp = self.visit(ctx.index_operator())
+            return ArrayCell(self.visit(ctx.exp6()), listexp)
+        return self.visit(ctx.exp7())
+    #exp7: exp7 DOT (ID| func_call) | exp8;
     def visitExp7(self, ctx: D96Parser.Exp7Context):
-        return None
+        if ctx.getChildCount() == 3:
+            exp = self.visit(ctx.exp7())
+            if ctx.ID():
+                return FieldAccess(exp, Id(ctx.ID().getText()))
+            else:
+                func = self.visit(ctx.func_call())
+                return CallExpr(exp, func[0], func[1])
+        else: return self.visit(ctx.exp8())
     #exp8: ID SC static_operand | exp9;
     def visitExp8(self, ctx: D96Parser.Exp8Context):
         if ctx.getChildCount() == 3:
             sttoperand = self.visit(ctx.static_operand())
             if len(sttoperand) == 1:
-                return CallExpr(Id(ctx.ID().getText()), sttoperand[0])
+                return FieldAccess(Id(ctx.ID().getText()), sttoperand[0])
             else: return CallExpr(Id(ctx.ID().getText()), sttoperand[0], sttoperand[1])
         return self.visit(ctx.exp9())
     #exp9: NEW func_call| exp10;
@@ -451,7 +482,7 @@ class ASTGeneration(D96Visitor):
         elif ctx.getChildCount() ==3:
             if ctx.exp():
                 return self.visit(ctx.exp())
-            else: return None
+            else: return FieldAccess(Id(ctx.ID().getText()), Id(ctx.DOLLARID().getText()))
 
 # /****************************************************************************/
 # /*					Member access						                  */
