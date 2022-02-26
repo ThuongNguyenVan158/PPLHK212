@@ -57,14 +57,14 @@ stament: vardecl_stm
 		| blockstatment;
 
 
-literal: (INTEGER| INTERGER_GT_ZERO | FLOAT_NUMBER | BOOLEAN_LITERAL | STRING_LITERAL | index_array_literal | multi_array | NULL);
+literal: (intlit | FLOAT_NUMBER | BOOLEAN_LITERAL | STRING_LITERAL | index_array_literal | multi_array | NULL);
 index_array_literal: ARRAY LP explists RP; 
 //primitive_literal: INTEGER | INTERGER_GT_ZERO | FLOAT_NUMBER | BOOLEAN_LITERAL | STRING_LITERAL;
 
 // multi_array: ARRAY LP index_array_literal (CM index_array_literal)* RP;
 multi_array: ARRAY LP arraylist RP;
 arraylist: index_array_literal CM arraylist | index_array_literal;
-array_type: ARRAY LSB (primitive_type |array_type) CM INTERGER_GT_ZERO RSB;
+array_type: ARRAY LSB (primitive_type |array_type) CM sizearray RSB;
 
 /****************************************************************************/
 /*								2.2 Statement								*/
@@ -231,24 +231,28 @@ FROMTO: '..';
 /****************************************************************************/
 /*								3.7 Literals								*/
 /****************************************************************************/
-INTERGER_GT_ZERO: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) { self.text = self.text.replace("_", "") };
-INTEGER: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER) { self.text = self.text.replace("_", "") };
+sizearray: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) ;
+intlit: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER | DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO);
 //INTERGER_GT_ZERO: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) { self.text = self.text.replace("_", "") };
-fragment DECIMAL_INTEGER: NON_ZERO_DIGIT DIGIT* ('_'? DIGIT+)*  
+DECIMAL_INTEGER_GT_ZERO: NON_ZERO_DIGIT DIGIT* ('_'? DIGIT+)* { self.text = self.text.replace("_", "") };
+
+DECIMAL_INTEGER: NON_ZERO_DIGIT DIGIT* ('_'? DIGIT+)* { self.text = self.text.replace("_", "") }  
 						| '0';
-fragment DECIMAL_INTEGER_GT_ZERO: NON_ZERO_DIGIT DIGIT* ('_'? DIGIT+)*;
 
-fragment OCT_INTEGER: '0' NON_OCT_DIGIT OCT_DIGIT* ('_'? OCT_DIGIT+)* 
+OCT_INTEGER_GT_ZERO: '0' NON_OCT_DIGIT OCT_DIGIT* ('_'? OCT_DIGIT+)* { self.text = self.text.replace("_", "") };
+
+OCT_INTEGER: '0' NON_OCT_DIGIT OCT_DIGIT* ('_'? OCT_DIGIT+)* { self.text = self.text.replace("_", "") }
 					| '00';
-fragment OCT_INTEGER_GT_ZERO: '0' NON_OCT_DIGIT OCT_DIGIT* ('_'? OCT_DIGIT+)*;
 
-fragment HEX_INTEGER: '0' [xX] NON_HEX_DIGIT HEX_DIGIT* ('_'? HEX_DIGIT+)*
+HEX_INTEGER_GT_ZERO: '0' [xX] NON_HEX_DIGIT HEX_DIGIT* ('_'? HEX_DIGIT+)* { self.text = self.text.replace("_", "") };
+
+HEX_INTEGER: '0' [xX] NON_HEX_DIGIT HEX_DIGIT* ('_'? HEX_DIGIT+)* { self.text = self.text.replace("_", "") }
 					|'0' [xX] '0';
-fragment HEX_INTEGER_GT_ZERO: '0' [xX] NON_HEX_DIGIT HEX_DIGIT* ('_'? HEX_DIGIT+)*;
 
-fragment BIN_INTEGER: '0' [bB] NON_BIN_DIGIT BIN_DIGIT* ('_'? BIN_DIGIT+)*
+BIN_INTEGER_GT_ZERO: '0' [bB] NON_BIN_DIGIT BIN_DIGIT* ('_'? BIN_DIGIT+)* { self.text = self.text.replace("_", "") };
+
+BIN_INTEGER: '0' [bB] NON_BIN_DIGIT BIN_DIGIT* ('_'? BIN_DIGIT+)* { self.text = self.text.replace("_", "") }
 					| '0' [bB] '0';
-fragment BIN_INTEGER_GT_ZERO: '0' [bB] NON_BIN_DIGIT BIN_DIGIT* ('_'? BIN_DIGIT+)*;
 
 FLOAT_NUMBER: (POINT_FLOAT| EXPONENT_FLOAT) { self.text = self.text.replace("_", "") };
 
