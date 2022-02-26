@@ -45,129 +45,128 @@ class ASTGenSuite(unittest.TestCase):
 
     def test_5(self):
         input = """Class Shape:Vu {
-                        Val a: Int ;
-                        
+                        Val $numOfShape: Int = 0;
+                        Val immutableAttribute: Int = 0;
+                        Var length, width: Int;
                     }
 """
-        # Val immutableAttribute: Int = 0;
-        #                 Var length, width: Int;
         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(0))),AttributeDecl(Instance,ConstDecl(Id(immutableAttribute),IntType,IntLit(0))),AttributeDecl(Instance,VarDecl(Id(length),IntType)),AttributeDecl(Instance,VarDecl(Id(width),IntType))])])"
         self.assertTrue(TestAST.test(input, expect, 5))
 
-#     def test_6(self):
-#         input = """Class Shape:Vu {
-#                         Val $numOfShape,numOfShape: Int=1,2;     
-#                         Var x: Float;
-#                     }
-# """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType))])])"
-#         self.assertTrue(TestAST.test(input, expect, 6))
+    def test_6(self):
+        input = """Class Shape:Vu {
+                        Val $numOfShape,numOfShape: Int=1,2;     
+                        Var x: Float;
+                    }
+"""
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType))])])"
+        self.assertTrue(TestAST.test(input, expect, 6))
 
-#     def test_7(self):
-#         input = """Class Shape:Vu {
-#                         Val $numOfShape,numOfShape: Int=1,2;     
-#                         Var x: Float;
-#                         $getNumOfShape() {
+    def test_7(self):
+        input = """Class Shape:Vu {
+                        Val $numOfShape,numOfShape: Int=1,2;     
+                        Var x: Float;
+                        $getNumOfShape() {
 
-#                         }
-#                     }
-# """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 7))
+                        }
+                    }
+"""
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([]))])])"
+        self.assertTrue(TestAST.test(input, expect, 7))
 
-#     def test_8(self):
-#         input = """Class Shape:Vu {
-#                         Val $numOfShape,numOfShape: Int=1,2;     
-#                         Var x: Float;
-#                         $getNumOfShape() {
+    def test_8(self):
+        input = """Class Shape:Vu {
+                        Val $numOfShape,numOfShape: Int=1,2;     
+                        Var x: Float;
+                        $getNumOfShape() {
 
-#                         }
-#                     }
-#                     Class Rectangle: Shape {
-#                         getArea() {
+                        }
+                    }
+                    Class Rectangle: Shape {
+                        getArea() {
 
-#                         }
-#                     }
+                        }
+                    }
 
-# """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([]))]),ClassDecl(Id(Rectangle),Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 8))
+"""
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([]))]),ClassDecl(Id(Rectangle),Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([]))])])"
+        self.assertTrue(TestAST.test(input, expect, 8))
 
-#     def test_9(self):
-#         input = """Class Shape:Vu {
-#                             Val $numOfShape,numOfShape: Int=1,2;     
-#                             Var x: Float;
-#                             $getNumOfShape() {
-#                                 Out.printInt(Shape::$numOfShape);
-#                             }
-#                        }
-#    """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([Call(Id(Out),Id(printInt),[FieldAccess(Id(Shape),Id($numOfShape))])]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 9))
+    def test_9(self):
+        input = """Class Shape:Vu {
+                            Val $numOfShape,numOfShape: Int=1,2;     
+                            Var x: Float;
+                            $getNumOfShape() {
+                                Out.printInt(Shape::$numOfShape);
+                            }
+                       }
+   """
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([Call(Id(Out),Id(printInt),[FieldAccess(Id(Shape),Id($numOfShape))])]))])])"
+        self.assertTrue(TestAST.test(input, expect, 9))
 
-#     def test_10(self):
-#         input = """Class Shape:Vu {
-#                              Val $numOfShape,numOfShape: Int=1,2;     
-#                              Var x: Float;
-#                              $getNumOfShape() {
-#                                  Return Self.length * Self.width;
-#                              }
-#                         }
-#     """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([Return(BinaryOp(*,FieldAccess(Self(),Id(length)),FieldAccess(Self(),Id(width))))]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 10))
+    def test_10(self):
+        input = """Class Shape:Vu {
+                             Val $numOfShape,numOfShape: Int=1,2;     
+                             Var x: Float;
+                             $getNumOfShape() {
+                                 Return Self.length * Self.width;
+                             }
+                        }
+    """
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([Return(BinaryOp(*,FieldAccess(Self(),Id(length)),FieldAccess(Self(),Id(width))))]))])])"
+        self.assertTrue(TestAST.test(input, expect, 10))
 
-#     def test_11(self):
-#         input = """Class Shape:Vu {
-#                              Val $numOfShape,numOfShape: Int=1,2;     
-#                              Var x: Float;
-#                              $getNumOfShape() {
-#                                  Return hey::$numOfShape;
-#                              }
-#                         }
-#     """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([Return(FieldAccess(Id(hey),Id($numOfShape)))]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 11))
+    def test_11(self):
+        input = """Class Shape:Vu {
+                             Val $numOfShape,numOfShape: Int=1,2;     
+                             Var x: Float;
+                             $getNumOfShape() {
+                                 Return hey::$numOfShape;
+                             }
+                        }
+    """
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Static,ConstDecl(Id($numOfShape),IntType,IntLit(1))),AttributeDecl(Instance,ConstDecl(Id(numOfShape),IntType,IntLit(2))),AttributeDecl(Instance,VarDecl(Id(x),FloatType)),MethodDecl(Id($getNumOfShape),Static,[],Block([Return(FieldAccess(Id(hey),Id($numOfShape)))]))])])"
+        self.assertTrue(TestAST.test(input, expect, 11))
 
-#     def test_12(self):
-#         input = """Class Shape:Vu {
-#                              Val My1stCons, My2ndCons: Int = 1 + 5, 2;
-#                              Var $x, $y : Int = 0, 0;
-#                              $getNumOfShape() {
-#                                  Return hey::$numOfShape;
-#                              }
-#                         }
-#     """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Instance,ConstDecl(Id(My1stCons),IntType,BinaryOp(+,IntLit(1),IntLit(5)))),AttributeDecl(Instance,ConstDecl(Id(My2ndCons),IntType,IntLit(2))),AttributeDecl(Static,VarDecl(Id($x),IntType,IntLit(0))),AttributeDecl(Static,VarDecl(Id($y),IntType,IntLit(0))),MethodDecl(Id($getNumOfShape),Static,[],Block([Return(FieldAccess(Id(hey),Id($numOfShape)))]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 12))
+    def test_12(self):
+        input = """Class Shape:Vu {
+                             Val My1stCons, My2ndCons: Int = 1 + 5, 2;
+                             Var $x, $y : Int = 0, 0;
+                             $getNumOfShape() {
+                                 Return hey::$numOfShape;
+                             }
+                        }
+    """
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Instance,ConstDecl(Id(My1stCons),IntType,BinaryOp(+,IntLit(1),IntLit(5)))),AttributeDecl(Instance,ConstDecl(Id(My2ndCons),IntType,IntLit(2))),AttributeDecl(Static,VarDecl(Id($x),IntType,IntLit(0))),AttributeDecl(Static,VarDecl(Id($y),IntType,IntLit(0))),MethodDecl(Id($getNumOfShape),Static,[],Block([Return(FieldAccess(Id(hey),Id($numOfShape)))]))])])"
+        self.assertTrue(TestAST.test(input, expect, 12))
 
-#     def test_13(self):
-#         input = """Class Shape:Vu {
-#                              Val My1stCons, My2ndCons: Int = 1 + 5, 2;
-#                              Var $x, $y : Int = 0, 0;
-#                              Constructor(x,y,z:Int;k:Float){
-#                              }
-#                              Destructor(){
-#                              }
-#                         }
-#     """
-#         expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Instance,ConstDecl(Id(My1stCons),IntType,BinaryOp(+,IntLit(1),IntLit(5)))),AttributeDecl(Instance,ConstDecl(Id(My2ndCons),IntType,IntLit(2))),AttributeDecl(Static,VarDecl(Id($x),IntType,IntLit(0))),AttributeDecl(Static,VarDecl(Id($y),IntType,IntLit(0))),MethodDecl(Id(Constructor),Instance,[param(Id(x),IntType),param(Id(y),IntType),param(Id(z),IntType),param(Id(k),FloatType)],Block([])),MethodDecl(Id(Destructor),Instance,[],Block([]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 13))
+    def test_13(self):
+        input = """Class Shape:Vu {
+                             Val My1stCons, My2ndCons: Int = 1 + 5, 2;
+                             Var $x, $y : Int = 0, 0;
+                             Constructor(x,y,z:Int;k:Float){
+                             }
+                             Destructor(){
+                             }
+                        }
+    """
+        expect = "Program([ClassDecl(Id(Shape),Id(Vu),[AttributeDecl(Instance,ConstDecl(Id(My1stCons),IntType,BinaryOp(+,IntLit(1),IntLit(5)))),AttributeDecl(Instance,ConstDecl(Id(My2ndCons),IntType,IntLit(2))),AttributeDecl(Static,VarDecl(Id($x),IntType,IntLit(0))),AttributeDecl(Static,VarDecl(Id($y),IntType,IntLit(0))),MethodDecl(Id(Constructor),Instance,[param(Id(x),IntType),param(Id(y),IntType),param(Id(z),IntType),param(Id(k),FloatType)],Block([])),MethodDecl(Id(Destructor),Instance,[],Block([]))])])"
+        self.assertTrue(TestAST.test(input, expect, 13))
 
-#     def test_14(self):
-#         """More complex program"""
-#         input = """Class Program:sv{
-#                         main(){
-#                                 d.dinh(1,2,3);
-#                                 {
-#                                     If(a){}
-#                                     Elseif(b){}
-#                                     Elseif(c){}
-#                                 }
-#                             }
-#                         }"""
-#         expect = "Program([ClassDecl(Id(Program),Id(sv),[MethodDecl(Id(main),Static,[],Block([Call(Id(d),Id(dinh),[IntLit(1),IntLit(2),IntLit(3)]),Block([If(Id(a),Block([]),If(Id(b),Block([]),If(Id(c),Block([]))))])]))])])"
-#         self.assertTrue(TestAST.test(input, expect, 14))
+    def test_14(self):
+        """More complex program"""
+        input = """Class Program:sv{
+                        main(){
+                                d.dinh(1,2,3);
+                                {
+                                    If(a){}
+                                    Elseif(b){}
+                                    Elseif(c){}
+                                }
+                            }
+                        }"""
+        expect = "Program([ClassDecl(Id(Program),Id(sv),[MethodDecl(Id(main),Static,[],Block([Call(Id(d),Id(dinh),[IntLit(1),IntLit(2),IntLit(3)]),Block([If(Id(a),Block([]),If(Id(b),Block([]),If(Id(c),Block([]))))])]))])])"
+        self.assertTrue(TestAST.test(input, expect, 14))
 
 #     def test_15(self):
 #         """More complex program"""
@@ -900,33 +899,33 @@ class ASTGenSuite(unittest.TestCase):
 #                      """
 #         expect = "Program([ClassDecl(Id(Program),Id(sv),[AttributeDecl(Instance,ConstDecl(Id(x),ClassType(Id(Vu)),NewExpr(Id(Vu),[]))),AttributeDecl(Instance,ConstDecl(Id(y),ClassType(Id(Vu)),NewExpr(Id(Yeu),[Id(x),BinaryOp(+,Id(x),Id(y)),NewExpr(Id(Hey),[])]))),AttributeDecl(Static,ConstDecl(Id($z),ClassType(Id(Vu)),NewExpr(Id(Tho),[])))])])"
 #         self.assertTrue(TestAST.test(input, expect, 65))
-    #
-    # def test_32(self):
-    #     """More complex program"""
-    #     input = r"""Class Program:sv{
-    #                       $checkStmt(){
-    #                        x=3;
-    #                        x[1][2][3]=3;
-    #                        x.y.z[1]=m::$z();
-    #                        x::$s=x.l.y();
-    #                     }
-    #                  }"""
-    #     expect = ""
-    #     self.assertTrue(TestAST.test(input, expect, 21))
-    #
-    # def test_32(self):
-    #     """More complex program"""
-    #     input = r"""Class Program:sv{
-    #                       $checkStmt(){
-    #                        x=3;
-    #                        x[1][2][3]=3;
-    #                        x.y.z[1]=m::$z();
-    #                        x::$s=x.l.y();
-    #                     }
-    #                  }"""
-    #     expect = ""
-    #     self.assertTrue(TestAST.test(input, expect, 21))
-    #
+#     #
+#     # def test_32(self):
+#     #     """More complex program"""
+#     #     input = r"""Class Program:sv{
+#     #                       $checkStmt(){
+#     #                        x=3;
+#     #                        x[1][2][3]=3;
+#     #                        x.y.z[1]=m::$z();
+#     #                        x::$s=x.l.y();
+#     #                     }
+#     #                  }"""
+#     #     expect = ""
+#     #     self.assertTrue(TestAST.test(input, expect, 21))
+#     #
+#     # def test_32(self):
+#     #     """More complex program"""
+#     #     input = r"""Class Program:sv{
+#     #                       $checkStmt(){
+#     #                        x=3;
+#     #                        x[1][2][3]=3;
+#     #                        x.y.z[1]=m::$z();
+#     #                        x::$s=x.l.y();
+#     #                     }
+#     #                  }"""
+#     #     expect = ""
+#     #     self.assertTrue(TestAST.test(input, expect, 21))
+#     #
 
 
 

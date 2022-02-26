@@ -1,4 +1,4 @@
-from tkinter.messagebox import NO
+
 from D96Visitor import D96Visitor
 from D96Parser import D96Parser
 from AST import *
@@ -30,41 +30,43 @@ class ASTGeneration(D96Visitor):
     #members: member members | member;
     def visitMembers(self, ctx: D96Parser.MembersContext):
         if ctx.getChildCount() == 2:
-            return [self.visit(ctx.member())] + self.visit(ctx.members())
-        return [self.visit(ctx.member())]
+            return self.visit(ctx.member()) + self.visit(ctx.members())
+        return self.visit(ctx.member())
     #member: att_declare | method_declare;
     def visitMember(self, ctx: D96Parser.MemberContext):
         if ctx.att_declare():
             return self.visit(ctx.att_declare())
-        return self.visit(ctx.method_declare())
+        return [self.visit(ctx.method_declare())]
     #att_declare: (VAL|VAR) att_declarelist SM;
     def visitAtt_declare(self, ctx: D96Parser.Att_declareContext):
         attlist = self.visit(ctx.att_declarelist())
+        inst = Instance()
+        stat = Static()
         if ctx.VAR():
             attdecl = []
             if len(attlist[0]) == 3:
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
-                        attdecl += [AttributeDecl(Instance(), VarDecl(attlist[i][0], attlist[i][2]))]
-                    else: attdecl += [AttributeDecl(Static(), VarDecl(attlist[i][0], attlist[i][2]))]
+                        attdecl += [AttributeDecl(inst, VarDecl(attlist[i][0], attlist[i][2]))]
+                    else: attdecl += [AttributeDecl(stat, VarDecl(attlist[i][0], attlist[i][2]))]
             else: 
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
-                        attdecl += [AttributeDecl(Instance(), VarDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
-                    else: attdecl += [AttributeDecl(Static(), VarDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
+                        attdecl += [AttributeDecl(inst, VarDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
+                    else: attdecl += [AttributeDecl(stat, VarDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
             return attdecl
         elif ctx.VAL():
             constattdecl = []
             if len(attlist[0]) == 3:
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
-                        constattdecl += [AttributeDecl(Instance(), ConstDecl(attlist[i][0], attlist[i][2]))]
-                    else: constattdecl += [AttributeDecl(Static(), ConstDecl(attlist[i][0], attlist[i][2]))]
+                        constattdecl += [AttributeDecl(inst, ConstDecl(attlist[i][0], attlist[i][2]))]
+                    else: constattdecl += [AttributeDecl(stat, ConstDecl(attlist[i][0], attlist[i][2]))]
             else: 
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
-                        constattdecl += [AttributeDecl(Instance(), ConstDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
-                    else: constattdecl += [AttributeDecl(Static(), ConstDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
+                        constattdecl += [AttributeDecl(inst, ConstDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
+                    else: constattdecl += [AttributeDecl(stat, ConstDecl(attlist[i][0], attlist[i][2], attlist[i][3]))]
             return constattdecl
     #att_declarelist: att_names Extended data_type | att_init_value;
     def visitAtt_declarelist(self, ctx: D96Parser.Att_declarelistContext):
@@ -83,7 +85,7 @@ class ASTGeneration(D96Visitor):
             for i in range(len(initlist)):
                 idlist = idlist + [initlist[i][0]]
                 typlist = typlist + [initlist[i][1]]
-                explist = explist + [initlist[len(initlist) - i -1][2]]
+                explist = explist + [initlist[len(initlist) - i -1][3]]
             for i in range(len(initlist)):
                 vardecllist = vardecllist + [[idlist[i], typlist[i], typ, explist[i]]]
             return vardecllist
@@ -97,7 +99,7 @@ class ASTGeneration(D96Visitor):
         if ctx.att_init_value():
             id = self.visit(ctx.idname())
             expr = self.visit(ctx.exp())
-            return [[id[0], id[1], 'Int', expr]] + self.visit(ctx.variable_init_value())
+            return [[id[0], id[1], 'Int', expr]] + self.visit(ctx.att_init_value())
         else:
             id = self.visit(ctx.idname())
             expr = self.visit(ctx.exp())
@@ -136,9 +138,11 @@ class ASTGeneration(D96Visitor):
         else: ismethodStatic = False
         parameterlist = self.visit(ctx.paramlist())
         block = self.visit(ctx.blockstatment())
+        inst = Instance()
+        stat = Static()
         if ismethodStatic:
-            return MethodDecl(Static(), Id(ctx.DOLLARID().getText()), parameterlist, block)
-        return MethodDecl(Instance(), Id(ctx.ID().getText()), parameterlist, block)
+            return MethodDecl(stat, Id(ctx.DOLLARID().getText()), parameterlist, block)
+        return MethodDecl(inst, Id(ctx.ID().getText()), parameterlist, block)
     #paramlist: params | ;
     def visitParamlist(self, ctx: D96Parser.ParamlistContext):
         if ctx.params():
@@ -187,6 +191,8 @@ class ASTGeneration(D96Visitor):
         elif ctx.assign_stm():
             return self.visit(ctx.assign_stm())
         elif ctx.if_stm():
+            return self.visit(ctx.if_stm())
+        elif ctx.forin_stm():
             return self.visit(ctx.forin_stm())
         elif ctx.break_stm():
             return self.visit(ctx.break_stm())
@@ -320,7 +326,7 @@ class ASTGeneration(D96Visitor):
     def visitIf_stm(self, ctx: D96Parser.If_stmContext):
         expr = self.visit(ctx.exp())
         block = self.visit(ctx.blockstatment())
-        elseiflist = self.visit(ctx.elseif_stms)
+        elseiflist = self.visit(ctx.elseif_stms())
         elsestm = self.visit(ctx.else_stm())
         if not elseiflist:
             if not elsestm:
@@ -383,11 +389,13 @@ class ASTGeneration(D96Visitor):
     def visitContructor_declare(self, ctx: D96Parser.Contructor_declareContext):
         para = self.visit(ctx.paramlist())
         block = self.visit(ctx.blockstatment())
-        return MethodDecl(Instance(), Id(ctx.CONSTRUCTOR().getText()), para, block)
+        inst = Instance()
+        return MethodDecl(inst, Id(ctx.CONSTRUCTOR().getText()), para, block)
     #detructor_declare: DESTRUCTOR LP RP blockstatment;
     def visitDetructor_declare(self, ctx: D96Parser.Detructor_declareContext):
         block = self.visit(ctx.blockstatment())
-        return MethodDecl(Instance(), Id(ctx.DESTRUCTOR().getText()), [], block)
+        inst = Instance()
+        return MethodDecl(inst, Id(ctx.DESTRUCTOR().getText()), [], block)
     #idname: ID | DOLLARID;
     def visitIdname(self, ctx: D96Parser.IdnameContext):
         if ctx.ID():
