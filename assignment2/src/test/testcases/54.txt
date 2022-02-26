@@ -1,0 +1,11 @@
+
+            Class Test {
+                    Val a: Int = 5;
+                    getMethod(x: Float){
+                        a::$method = b.ba;
+                        a.b.c.d = e.b.e.f;
+                    }
+                    Var $b, $c: Array[Int, 5];
+            }
+
+            

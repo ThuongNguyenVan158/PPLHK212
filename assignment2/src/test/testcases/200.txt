@@ -1,0 +1,2 @@
+class A{x(){ ; }}
+        class B : A{void x(){##mt##}}

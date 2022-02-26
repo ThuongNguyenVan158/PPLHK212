@@ -1,0 +1,9 @@
+
+                    Class Sv:BK{
+                        $get(){
+                            Var x: Vu;
+                            Var z: Vu= New Vu(); 
+                            Return;
+                            Var x: Int= Self +Self;
+                        }
+                    }

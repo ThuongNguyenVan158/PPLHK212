@@ -1,4 +1,4 @@
-# Generated from c:\Users\thuon\Documents\GitHub\PPL212\assignment2\src\main\d96\parser\D96.g4 by ANTLR 4.8
+# Generated from e:\Nam3online\Ki212\PPL\Asgment\Asg2Test\assignment2\src\main\d96\parser\D96.g4 by ANTLR 4.8
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO

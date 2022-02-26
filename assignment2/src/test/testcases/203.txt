@@ -1,1 +1,11 @@
-int main( {}
+
+        Class A {
+            Val x,y : Int;
+            Mul(){
+                Return Self.x + Self.y;
+            }
+            main(){
+            
+            }
+        }
+            

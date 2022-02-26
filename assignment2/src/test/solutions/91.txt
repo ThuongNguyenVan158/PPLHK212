@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Sv),Id(BK),[MethodDecl(Id($get),Static,[],Block([VarDecl(Id(x),ClassType(Id(Vu))),VarDecl(Id(z),ClassType(Id(Vu)),NewExpr(Id(Vu),[])),Return(),VarDecl(Id(x),IntType,BinaryOp(+,Self(),Self()))]))])])

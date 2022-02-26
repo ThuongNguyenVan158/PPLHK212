@@ -1,0 +1,16 @@
+
+        Class Test {
+            main()
+            {
+            Var A, B, temp : Test = New A(), New B(), New C();
+
+            Other.prVarf("Please enter the 1st number : ");
+            Other.scanf("%d",A);
+            Other.prVarf("\nPlease enter the 2nd number : ");
+            Other.scanf("%d",B);
+            Return 0;
+            }
+
+        }
+
+        

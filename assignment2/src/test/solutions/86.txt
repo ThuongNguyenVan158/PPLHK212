@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([Call(Id(d),Id(dv),[]),Return(FieldAccess(Id(d),Id(d))),Return(CallExpr(Id(d),Id(dv),[]))]))])])

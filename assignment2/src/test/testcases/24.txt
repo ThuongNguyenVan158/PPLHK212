@@ -1,0 +1,6 @@
+Class Program:sv{
+                        $testBoolean(){
+                            If(((!a&&k)||(c&&b))&&("sds"==."sds")){
+                            }
+                        }
+                     }

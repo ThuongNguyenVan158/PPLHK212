@@ -1,0 +1,9 @@
+
+        Class Test {
+            main(){
+                Return a.$X(1);
+            }
+
+        }
+
+        

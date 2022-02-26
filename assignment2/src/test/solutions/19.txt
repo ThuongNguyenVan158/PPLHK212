@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(sv),[AttributeDecl(Instance,VarDecl(Id(q),StringType,StringLit(hey))),AttributeDecl(Static,VarDecl(Id($s),StringType,StringLit(This is a \\\b\f\r\n\t\' string containing tab \t))),AttributeDecl(Instance,VarDecl(Id(c),StringType,StringLit(He asked me: '"Where is John?'")))])])

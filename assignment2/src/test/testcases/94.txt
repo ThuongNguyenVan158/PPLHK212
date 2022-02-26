@@ -1,0 +1,19 @@
+
+           Class Restaurant{
+               Var doanhthu,hoahong: Int;
+                Calculator(){
+                    If(doanhthu>1000)
+                    {
+                        self.hoahong=doanhthu*0.05;
+                    }
+                    Elseif(doanhthu>2000)
+                    {
+                        self.hoahong=doanhthu*0.1;
+                    }
+                    Elseif(doanhthu>5000)
+                    {
+                        self.hoahong=doanhthu*0.3;
+                    }
+                }
+            }
+           

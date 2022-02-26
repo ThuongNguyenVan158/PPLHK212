@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(sv),[MethodDecl(Id($checkStmt),Static,[],Block([VarDecl(Id(x),IntType,IntLit(3)),ConstDecl(Id(y),FloatType,FloatLit(0.0413)),ConstDecl(Id(z),FloatType,FloatLit(4.23))]))])])

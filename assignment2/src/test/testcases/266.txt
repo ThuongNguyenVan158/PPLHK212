@@ -1,0 +1,8 @@
+
+         Class Test {
+            main(){
+                Return "abc"+."cde" + a::$X(1;1);
+            }
+        }
+
+        

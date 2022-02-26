@@ -1,0 +1,10 @@
+
+            class Shape {
+            var $length,$width: Int;
+            getArea() {}
+            Shape(length::Int,width::Int){
+            Self.length = length;
+            Self.width = width;
+            }
+            }
+                

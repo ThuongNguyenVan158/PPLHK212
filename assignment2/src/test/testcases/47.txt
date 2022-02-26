@@ -1,0 +1,17 @@
+
+            Class Test : khang{
+                Val khang, $x: Int = 1, 2;
+                Var $b: String = "khang";
+
+                $getShape(a,b: Float){
+                    Val a,b: Float;
+                    a = 12;
+                    b = 15.35;
+                }
+
+                getMethod() {
+
+                }
+            }
+
+            

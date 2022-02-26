@@ -1,0 +1,7 @@
+
+        Class Example {
+            A(){
+            Var r,s : Int = 000;
+        }
+        }
+        

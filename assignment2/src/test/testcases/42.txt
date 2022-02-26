@@ -1,0 +1,7 @@
+
+            Class Test : khang{
+                Val a, $b, c: Int;
+                Var $b, d: Array[Int,5];
+            }
+
+            

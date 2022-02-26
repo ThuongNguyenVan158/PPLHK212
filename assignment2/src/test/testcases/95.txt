@@ -1,0 +1,16 @@
+
+           Class Integer{
+                main(n:Int)
+                {
+                    Var i,sum:Int=0,0;
+                    Foreach(i In 1 .. n)
+                    {
+                        If(n%i==0)
+                        {
+                            sum=sum+i;
+                        }
+                    }
+                    Return sum;
+                }
+            }
+           

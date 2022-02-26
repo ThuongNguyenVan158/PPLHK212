@@ -1,0 +1,12 @@
+Class Program:sv{
+                          $checkStmt(){
+                           Break;
+                           Continue;
+                           Return I.love.you(Vu,Tho);
+                           {
+                                Break;
+                                Continue;
+                               Return I.love.you(Vu,Tho);
+                           }
+                        }
+                     }

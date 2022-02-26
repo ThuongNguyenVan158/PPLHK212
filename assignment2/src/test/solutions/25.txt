@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(sv),[AttributeDecl(Instance,VarDecl(Id(x),StringType,BinaryOp(+.,StringLit(asds),StringLit(sda))))])])

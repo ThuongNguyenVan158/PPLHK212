@@ -1,0 +1,21 @@
+
+        Class Test {
+            print(x: Int)
+            {
+                x();
+            }
+            main()
+            {
+                Val x: Int= 100+1;
+                Foreach( h In 1 .. x+1 by x-1)
+                {
+                    If(x%2 == 0)
+                    {
+                        print(x);
+                    }
+                    else Continue;
+                }
+            }
+        }
+
+        

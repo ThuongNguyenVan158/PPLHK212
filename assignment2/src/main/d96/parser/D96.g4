@@ -140,6 +140,8 @@ static_method_invocate: ID SC static_func_call;
 
 explists: explist | ;
 explist: exp CM explist | exp;
+sizearray: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) ;
+intlit: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER | DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO);
 
 
 
@@ -231,8 +233,7 @@ FROMTO: '..';
 /****************************************************************************/
 /*								3.7 Literals								*/
 /****************************************************************************/
-sizearray: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) ;
-intlit: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER | DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO);
+
 //INTERGER_GT_ZERO: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) { self.text = self.text.replace("_", "") };
 DECIMAL_INTEGER_GT_ZERO: NON_ZERO_DIGIT DIGIT* ('_'? DIGIT+)* { self.text = self.text.replace("_", "") };
 

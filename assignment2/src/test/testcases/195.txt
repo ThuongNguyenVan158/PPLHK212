@@ -1,0 +1,11 @@
+
+            class Example2 {
+            main(){
+                
+            }
+            }
+            class Example3 : Example2
+            {
+                
+            }
+                

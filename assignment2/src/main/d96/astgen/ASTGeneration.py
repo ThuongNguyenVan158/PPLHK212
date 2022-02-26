@@ -17,8 +17,19 @@ class ASTGeneration(D96Visitor):
     def visitClass_declare(self, ctx: D96Parser.Class_declareContext):
         memlist = self.visit(ctx.member_decl())
         if ctx.getChildCount() == 3:
-            return ClassDecl(Id(ctx.ID().getText()), memlist)
-        return ClassDecl(Id(ctx.ID(0).getText()), memlist, Id(ctx.ID(1).getText()))
+            for x in memlist:
+                if type(x)==MethodDecl:
+                    if x.name.name=="main" and (not x.param):
+                        if ctx.ID(0).getText()=="Program": 
+                            x.kind=Static()
+            return ClassDecl(Id(ctx.ID(0).getText()), memlist)
+        else:
+            for x in memlist:
+                if type(x)==MethodDecl:
+                    if x.name.name=="main" and (not x.param):
+                        if  ctx.ID(0).getText()=="Program": 
+                            x.kind=Static()
+            return ClassDecl(Id(ctx.ID(0).getText()), memlist, Id(ctx.ID(1).getText()))
     #member_decl: LB memberlist RB;
     def visitMember_decl(self, ctx: D96Parser.Member_declContext):
         return self.visit(ctx.memberlist())
@@ -174,8 +185,8 @@ class ASTGeneration(D96Visitor):
     #staments: stament staments | stament;
     def visitStaments(self, ctx: D96Parser.StamentsContext):
         if ctx.getChildCount() == 2:
-            return [self.visit(ctx.stament())] + self.visit(ctx.staments())
-        return [self.visit(ctx.stament())]
+            return self.visit(ctx.stament()) + self.visit(ctx.staments())
+        return self.visit(ctx.stament())
     #stament: vardecl_stm
 		# | assign_stm
 		# | if_stm
@@ -189,26 +200,24 @@ class ASTGeneration(D96Visitor):
         if ctx.vardecl_stm():
             return self.visit(ctx.vardecl_stm())
         elif ctx.assign_stm():
-            return self.visit(ctx.assign_stm())
+            return [self.visit(ctx.assign_stm())]
         elif ctx.if_stm():
-            return self.visit(ctx.if_stm())
+            return [self.visit(ctx.if_stm())]
         elif ctx.forin_stm():
-            return self.visit(ctx.forin_stm())
+            return [self.visit(ctx.forin_stm())]
         elif ctx.break_stm():
-            return self.visit(ctx.break_stm())
+            return [self.visit(ctx.break_stm())]
         elif ctx.continue_stm():
-            return self.visit(ctx.continue_stm())
+            return [self.visit(ctx.continue_stm())]
         elif ctx.return_stm():
-            return self.visit(ctx.return_stm())
+            return [self.visit(ctx.return_stm())]
         elif ctx.method_invocation_stm():
-            return self.visit(ctx.method_invocation_stm())
-        else: return self.visit(ctx.blockstatment())
-    #literal: (INTEGER| INTERGER_GT_ZERO | FLOAT_NUMBER | BOOLEAN_LITERAL | STRING_LITERAL | index_array_literal | multi_array | NULL);
+            return [self.visit(ctx.method_invocation_stm())]
+        else: return [self.visit(ctx.blockstatment())]
+    #literal: (intlit | FLOAT_NUMBER | BOOLEAN_LITERAL | STRING_LITERAL | index_array_literal | multi_array | NULL);
     def visitLiteral(self, ctx: D96Parser.LiteralContext):
-        if ctx.INTEGER():
-            return IntLiteral(int(ctx.INTEGER().getText()))
-        elif ctx.INTERGER_GT_ZERO:
-            return IntLiteral(int(ctx.INTERGER_GT_ZERO().getText()))
+        if ctx.intlit():
+            return self.visit(ctx.intlit())
         elif ctx.FLOAT_NUMBER():
             return FloatLiteral(float(ctx.FLOAT_NUMBER().getText()))
         elif ctx.BOOLEAN_LITERAL():
@@ -234,12 +243,12 @@ class ASTGeneration(D96Visitor):
         if ctx.getChildCount() == 3:
             return [self.visit(ctx.index_array_literal(0))] + self.visit(ctx.arraylist())
         else: return [self.visit(ctx.index_array_literal(0))]
-    #array_type: ARRAY LSB (primitive_type |array_type) CM INTERGER_GT_ZERO RSB;
+    #array_type: ARRAY LSB (primitive_type |array_type) CM sizearray RSB;
     def visitArray_type(self, ctx: D96Parser.Array_typeContext):
         if ctx.primitive_type():
             typ = self.visit(ctx.primitive_type())
         else: typ = self.visit(ctx.array_type())
-        sizearr = int(ctx.INTERGER_GT_ZERO().getText())
+        sizearr = self.visit(ctx.sizearray())
         return ArrayType(sizearr, typ)
 
 # /****************************************************************************/
@@ -251,19 +260,19 @@ class ASTGeneration(D96Visitor):
         if ctx.VAR():
             vardecl = []
             if len(varli[0]) == 2:
-                for i in len(varli):
+                for i in range(len(varli)):
                     vardecl += [VarDecl(varli[i][0], varli[i][1])]
             else: 
-                for i in len(varli):
+                for i in range(len(varli)):
                     vardecl += [VarDecl(varli[i][0], varli[i][1], varli[i][2])]
             return vardecl
         elif ctx.VAL():
             constdecl = []
             if len(varli[0]) == 2:
-                for i in len(varli):
+                for i in range(len(varli)):
                     constdecl += [ConstDecl(varli[i][0], varli[i][1])]
             else: 
-                for i in len(varli):
+                for i in range(len(varli)):
                     constdecl += [ConstDecl(varli[i][0], varli[i][1], varli[i][2])]
             return constdecl
     #varlist: variable_names Extended data_type | variable_init_value;
@@ -280,8 +289,8 @@ class ASTGeneration(D96Visitor):
             explist = []
             vardecllist = []
             for i in range(len(initlist)):
-                idlist = idlist + initlist[i][0]
-                explist = explist + initlist[len(initlist) - i -1][2]
+                idlist = idlist + [initlist[i][0]]
+                explist = explist + [initlist[len(initlist) - i -1][2]]
             for i in range(len(initlist)):
                 vardecllist = vardecllist + [[idlist[i],typ, explist[i]]]
             return vardecllist
@@ -294,11 +303,11 @@ class ASTGeneration(D96Visitor):
     def visitVariable_init_value(self, ctx: D96Parser.Variable_init_valueContext):
         if ctx.variable_init_value():
             expr = self.visit(ctx.exp())
-            return [(Id(ctx.ID().getText()), 'Int', expr)] + self.visit(ctx.variable_init_value())
+            return [[Id(ctx.ID().getText()), 'Int', expr]] + self.visit(ctx.variable_init_value())
         else:
             expr = self.visit(ctx.exp())
             typ = self.visit(ctx.data_type())
-            return [(Id(ctx.ID().getText()), typ, expr)]
+            return [[Id(ctx.ID().getText()), typ, expr]]
     #assign_stm: leftassign ASSIGN exp SM;
     def visitAssign_stm(self, ctx: D96Parser.Assign_stmContext):
         return Assign(self.visit(ctx.leftassign()), self.visit(ctx.exp()))
@@ -311,16 +320,20 @@ class ASTGeneration(D96Visitor):
     def visitScalarvar(self, ctx: D96Parser.ScalarvarContext):
         if ctx.getChildCount() == 3:
             if ctx.exp():
-                return FieldAccess(self.visit(ctx.exp(), Id(ctx.ID().getText())))
+                return FieldAccess(self.visit(ctx.exp()), Id(ctx.ID(0).getText()))
             else: return FieldAccess(Id(ctx.ID(0).getText()), Id(ctx.ID(1).getText()))
-        if ctx.ID():
-            return Id(ctx.ID().getText())
+        elif ctx.ID():
+            return Id(ctx.ID(0).getText())
         return self.visit(ctx.exp6())
     #indexed_exp: exp index_operator | exp;
     def visitIndexed_exp(self, ctx: D96Parser.Indexed_expContext):
         if ctx.getChildCount() == 2:
+            expr = self.visit(ctx.exp())
             listexp = self.visit(ctx.index_operator())
-            return ArrayCell(self.visit(ctx.exp()), listexp)
+            if(type(expr)==ArrayCell):
+                listexp=expr.idx+listexp
+                expr=expr.arr
+            return ArrayCell(expr, listexp)
         return self.visit(ctx.exp())
     #if_stm: IF LP exp RP blockstatment elseif_stms else_stm;
     def visitIf_stm(self, ctx: D96Parser.If_stmContext):
@@ -337,10 +350,12 @@ class ASTGeneration(D96Visitor):
         if not elsestm:
             temp = [If(elseiflist[len(elseiflist)-1][0], elseiflist[len(elseiflist)-1][1])]
         else: temp = [If(elseiflist[len(elseiflist)-1][0], elseiflist[len(elseiflist)-1][1], elsestm[0])]
-        for i in range(len(elseiflist) -1):
-            elseblock = [If(elseiflist[len(elseiflist)-i-1][0], elseiflist[len(elseiflist)-i-1][1], temp[0])]
-            temp = elseblock
-        return elseblock[0]
+        elseblock =temp
+        if len(elseiflist) >1:
+            for i in range(len(elseiflist) -1):
+                elseblock = [If(elseiflist[len(elseiflist)-i-2][0], elseiflist[len(elseiflist)-i-2][1], temp[0])]
+                temp = elseblock
+        return If(expr, block, elseblock[0])
     #elseif_stms: elseif_stm elseif_stms | ;
     def visitElseif_stms(self, ctx: D96Parser.Elseif_stmsContext):
         if ctx.getChildCount() == 2:
@@ -448,8 +463,12 @@ class ASTGeneration(D96Visitor):
     #exp6: exp6 index_operator | exp7;
     def visitExp6(self, ctx: D96Parser.Exp6Context):
         if ctx.getChildCount() == 2:
+            expr = self.visit(ctx.exp6())
             listexp = self.visit(ctx.index_operator())
-            return ArrayCell(self.visit(ctx.exp6()), listexp)
+            if(type(expr)==ArrayCell):
+                listexp=expr.idx+listexp
+                expr=expr.arr
+            return ArrayCell(expr, listexp)
         return self.visit(ctx.exp7())
     #exp7: exp7 DOT (ID| func_call) | exp8;
     def visitExp7(self, ctx: D96Parser.Exp7Context):
@@ -531,3 +550,41 @@ class ASTGeneration(D96Visitor):
         if ctx.getChildCount() == 3:
             return [self.visit(ctx.exp())] + self.visit(ctx.explist())
         else: return [self.visit(ctx.exp())]
+    # sizearray: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) ;
+    # def visitSizearray(self, ctx: D96Parser.SizearrayContext):
+    #     if ctx.DECIMAL_INTEGER_GT_ZERO(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText()))
+    #     elif ctx.OCT_INTEGER_GT_ZERO(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText(),8))
+    #     elif ctx.HEX_INTEGER_GT_ZERO(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText(),16))
+    #     elif ctx.BIN_INTEGER_GT_ZERO(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText(),2))
+    def visitSizearray(self, ctx: D96Parser.SizearrayContext):
+        if ctx.DECIMAL_INTEGER_GT_ZERO(): 
+            return int(ctx.getChild(0).getText())
+        elif ctx.OCT_INTEGER_GT_ZERO(): 
+            return int(ctx.getChild(0).getText(),8)
+        elif ctx.HEX_INTEGER_GT_ZERO(): 
+            return int(ctx.getChild(0).getText(),16)
+        elif ctx.BIN_INTEGER_GT_ZERO(): 
+            return int(ctx.getChild(0).getText(),2)
+    # intlit: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER | DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO);
+    def visitIntlit(self, ctx: D96Parser.IntlitContext):
+        if ctx.DECIMAL_INTEGER(): 
+            return IntLiteral(int(ctx.getChild(0).getText()))
+        elif ctx.OCT_INTEGER(): 
+            return IntLiteral(int(ctx.getChild(0).getText(),8))
+        elif ctx.HEX_INTEGER(): 
+            return IntLiteral(int(ctx.getChild(0).getText(),16))
+        elif ctx.BIN_INTEGER(): 
+            return IntLiteral(int(ctx.getChild(0).getText(),2))
+        elif ctx.DECIMAL_INTEGER_GT_ZERO(): 
+            return IntLiteral(int(ctx.getChild(0).getText()))
+        elif ctx.OCT_INTEGER_GT_ZERO(): 
+            return IntLiteral(int(ctx.getChild(0).getText(),8))
+        elif ctx.HEX_INTEGER_GT_ZERO(): 
+            return IntLiteral(int(ctx.getChild(0).getText(),16))
+        elif ctx.BIN_INTEGER_GT_ZERO(): 
+            return IntLiteral(int(ctx.getChild(0).getText(),2))
+        

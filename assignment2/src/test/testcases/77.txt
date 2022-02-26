@@ -1,0 +1,5 @@
+Class SV{
+                        Var a,$b,c,d:Array[Array[Array[String,3],5],5_2];
+                        Val a,$b,$c,d:A=New A(1,2),New A(3,4), New A(5,6), New A(7,8);
+                    }
+                    

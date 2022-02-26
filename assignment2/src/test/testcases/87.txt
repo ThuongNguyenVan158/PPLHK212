@@ -1,0 +1,7 @@
+Class Program{
+                        main(){
+                            d::$dv(1,2,3);
+                            Return d::$dv(1,2,3);
+                            Return d::$d;
+                        }
+                    }

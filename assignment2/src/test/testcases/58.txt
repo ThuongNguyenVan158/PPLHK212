@@ -1,0 +1,17 @@
+
+           Class Program {
+                reCalcu() {
+                    Var arr : Array[Float, 2];
+                    arr = Array(1, 4.44);
+                    Out.printFloat(arr[1]);
+                    Val arr_2 : Array[Array[Int, 3], 4];
+                    arr_2 = Array(
+                        Array(4, 4),
+                        Array(12, 4.4),
+                        Array(3.2323, 0),
+                        Array(23, 56)
+                    );
+                    Return value ;
+                }
+                }
+            

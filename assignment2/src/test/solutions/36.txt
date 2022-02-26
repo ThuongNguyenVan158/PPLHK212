@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(sv),[MethodDecl(Id($checkStmt),Static,[],Block([Break,Continue,Return(CallExpr(FieldAccess(Id(I),Id(love)),Id(you),[Id(Vu),Id(Tho)])),Block([Break,Continue,Return(CallExpr(FieldAccess(Id(I),Id(love)),Id(you),[Id(Vu),Id(Tho)]))])]))])])

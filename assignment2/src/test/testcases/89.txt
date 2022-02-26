@@ -1,0 +1,11 @@
+Class Program{
+                    main(){
+                        Return 1;
+                        Return "dinh";
+                        Return True;
+                        Return a;
+                        Return Self;
+                        Return Null;
+                        Return Array(3,4,5);
+                    }
+                }

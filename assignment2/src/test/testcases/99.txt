@@ -1,0 +1,15 @@
+Class ABC {
+            method() {
+            Val a : Array[Int,3] = Array(1);
+            Foreach(a In 1 .. a By a/2)
+            {
+               If(a>10)
+               {
+                  io.Print("A >10");
+               }
+               Else{
+                  Continue;
+               }
+            }
+            }
+            }

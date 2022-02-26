@@ -1,0 +1,5 @@
+
+                    Class Sv:BK{
+                        Var c:String=(-4)+4;
+                        Val d:Boolean=(!True) && True;
+                    }

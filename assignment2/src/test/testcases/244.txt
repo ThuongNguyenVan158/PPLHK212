@@ -1,0 +1,11 @@
+
+         Class Test {
+            Val $Var : Int = New A();
+            Void()
+            {
+            ##a= $Var+1;##
+            Return $Var;
+            }
+        }
+
+        

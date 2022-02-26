@@ -1,0 +1,10 @@
+
+        Class Example {
+            Test(){
+                If (flag== False) {{}}
+                Elseif(1) {}
+                Elseif((3*2)+1) {}
+                Else{{}}
+            }
+        }
+        

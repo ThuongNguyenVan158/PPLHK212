@@ -1,0 +1,3 @@
+Class SV{
+                        Var a,b,c:Int=a+b,3-4,d.sv()+d::$d(3,2)-5;
+                    }

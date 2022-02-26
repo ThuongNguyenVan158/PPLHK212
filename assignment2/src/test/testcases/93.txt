@@ -1,0 +1,15 @@
+
+           Class Integer{
+                giaiThua(n:Int)
+                {
+                    If (n == 1)
+                    {
+                        Return 1;
+                    }
+                    Else{
+                        Return n * Integer.giaiThua(n - 1);
+                    }
+
+                }
+            }
+           

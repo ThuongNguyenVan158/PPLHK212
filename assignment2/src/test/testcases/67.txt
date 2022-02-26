@@ -1,0 +1,5 @@
+
+                    Class Sv:BK{
+                        Var a:Boolean=True;
+                        Val $b:Boolean=False;
+                    }

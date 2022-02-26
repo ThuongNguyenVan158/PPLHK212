@@ -1,0 +1,6 @@
+Class Program:sv{
+                        $checkStmt(){
+                            Var x:Int=3;
+                            Val y,z:Float =4_1.3e-3, 4.23;
+                        }
+                     }

@@ -1,0 +1,9 @@
+
+        Class Test {
+            main(){
+                    If abc {a=c;}
+                    Else {c=d};
+                }
+        }
+
+        

@@ -1,0 +1,7 @@
+Class SV{
+                        Var a,$b,c,d:Int=1,2,3,4;
+                        Val a,$b,$c,d:Array[Int,5_2]=Array(1,2,3,4,5),Array(
+                            Array("dinh","1913114","BK"),Array("03","46","93"),Array("64","27","Dinh")
+                            ),a+b,c+d;
+                    }
+                    

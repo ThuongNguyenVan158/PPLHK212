@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(sv),[MethodDecl(Id($testBoolean),Static,[],Block([If(BinaryOp(&&,BinaryOp(||,BinaryOp(&&,UnaryOp(!,Id(a)),Id(k)),BinaryOp(&&,Id(c),Id(b))),BinaryOp(==.,StringLit(sds),StringLit(sds))),Block([]))]))])])

@@ -1,0 +1,17 @@
+
+        Class CallbackHell
+        {
+            main(){
+                If(1){
+                    If(1){
+                        If(1){
+                            If(1){
+                                Return 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        

@@ -1,0 +1,13 @@
+
+            Class Program {
+               main() {
+                Val a: Int;
+                Var b: Float;
+               }
+
+               main(a,b: Int){
+                Return "khang";
+               }
+            }
+
+            

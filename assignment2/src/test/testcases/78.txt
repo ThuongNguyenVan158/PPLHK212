@@ -1,0 +1,11 @@
+Class SV{
+                        Var a:Int;
+                        Val b:Float;
+                    }Class BK{
+                        Var e:Array[Array[String,3],4];
+                        Val f:SV;
+                    }
+                    Class Sv:BK{
+                        Var c:String;
+                        Val d:Boolean;
+                    }

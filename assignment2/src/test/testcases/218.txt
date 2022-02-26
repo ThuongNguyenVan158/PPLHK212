@@ -1,0 +1,8 @@
+
+        Class Test {
+            main(){}
+            Return y;
+        }
+
+}
+        

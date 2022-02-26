@@ -1,0 +1,11 @@
+
+         Class Test {
+            Val $Var : Int = check() + 1 ;
+            Void()
+            {
+                If (IsaFunc()==.1) {Return false;}
+                Return peek() == 1;
+            }
+        }
+
+        

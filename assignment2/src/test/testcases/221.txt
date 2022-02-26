@@ -1,0 +1,7 @@
+
+        Class Test {
+           Var b : Array[Array[Int,1],100];
+           Self.b[0][1] = 100;
+        }
+
+        

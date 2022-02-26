@@ -1,0 +1,16 @@
+Class Program:sv{
+                        main(a,b:Int){
+                                d.dinh(1,2,3);
+                                {
+                                    If(a){}
+                                    Elseif(b){}
+                                    Elseif(c){}
+                                }
+                            }
+                        }
+                        Class Program{
+                        main(){
+
+                        }
+                        }
+                        

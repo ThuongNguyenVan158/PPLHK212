@@ -1,0 +1,8 @@
+Class Program{
+                        main(){
+                            d.dv();
+                            Return d.d;
+                            Return d.dv();
+                        }
+                    }
+                    

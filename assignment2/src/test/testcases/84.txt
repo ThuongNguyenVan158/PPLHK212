@@ -1,0 +1,4 @@
+
+                    Class Sv:BK{
+                        Val a,$b,c,$d:Float=-12.,-.0e10,-4.54,65.3;
+                    }

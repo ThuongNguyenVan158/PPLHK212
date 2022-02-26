@@ -1,0 +1,9 @@
+
+        Class Test {
+                main(){
+                    Var a: Int;
+                    a = Continue + 1;
+                };
+        }
+
+        

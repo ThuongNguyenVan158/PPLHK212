@@ -1,0 +1,19 @@
+Class Program:sv{
+                          $checkStmt(){
+                            ##Find max in 3 elements##
+
+                            Var x,y,z:Int;
+                            realtime.scanf(x,y,z);
+                            Var max:Int=x;
+
+                            If ((x>y) && (x>z)){
+                                max=x;
+                            }
+                            Elseif ((y>z) && (y>x)){
+                                max=y;
+                            }
+                            Else{
+                                max=z;
+                            }
+                        }
+                     }

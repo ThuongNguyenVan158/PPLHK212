@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Sv),Id(BK),[AttributeDecl(Instance,VarDecl(Id(c),ArrayType(2,StringType),[StringLit(dinh),StringLit(1913114)]))])])

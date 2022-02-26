@@ -1,3 +1,8 @@
 
-                Class main{}
-                
+        Class ABC { 
+            Var $1d : Int = 0;
+            ABC(){
+                Return d;
+        }
+        }
+        
