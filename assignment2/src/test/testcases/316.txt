@@ -1,0 +1,10 @@
+
+        Class Person {
+                Val firstName : String = "Thuong"; 
+                Val lastName: String = "Thuong";
+                Var age: Int = 22;
+                fullname() {
+                    Return Self.firstName +. Self.lastName;
+                }
+        }
+        

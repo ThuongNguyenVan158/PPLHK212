@@ -1,0 +1,8 @@
+Class ABC : DEF{ 
+            main(){
+
+            }
+            main(a,b,c: Int ; e,f,g : Float){
+                Return;
+            }
+        }

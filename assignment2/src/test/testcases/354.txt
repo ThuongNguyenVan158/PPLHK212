@@ -1,0 +1,4 @@
+
+        Class main {
+            Var a,b: Array[Array[Int,3], 2];
+        }

@@ -1,0 +1,14 @@
+
+        Class CallbackHell
+        {
+            typeString(){
+                Return "string";
+            }
+            typeInt(){
+                Return 1;
+            }
+            typeFloat(){
+                Return 1.0;
+            }
+        }
+        

@@ -1,0 +1,10 @@
+
+        Class Test {
+            swap(a,b: Int)
+            {
+                Var temp: Int = a;
+                a = b;
+                b= temp;
+            }
+        }
+        

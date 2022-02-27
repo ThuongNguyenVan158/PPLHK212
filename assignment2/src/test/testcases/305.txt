@@ -1,0 +1,13 @@
+
+        Class Example1
+        {
+            factorial(n : Int){
+                If (n == 0) {
+                    Return 1;
+                }
+                Else{
+                     Return n * Example1.factorial(n - 1);
+                    }
+            }
+        }
+            

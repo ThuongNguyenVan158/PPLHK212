@@ -1,0 +1,8 @@
+
+        Class XXX { }
+        Class main : XXX {
+            Var a,b : Int=2,1;
+            Var a,b : Int=1,2;
+            Var a : XXX;
+            method(){}
+        }

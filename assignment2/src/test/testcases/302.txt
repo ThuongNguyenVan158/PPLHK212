@@ -1,3 +1,4 @@
-int main () {
-            getIntLn();
+Class main {
+             Var $numOfShape : Int = 0;
+            Var $immuAttribute : Int = 0;
         }

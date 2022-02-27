@@ -1,0 +1,9 @@
+
+        Class SinhVien {
+            getTBTL(id:Int;name:String){
+                a=b+c;
+                c=2*3;
+                b=3/4;
+            }
+        }
+        

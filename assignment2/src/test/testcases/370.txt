@@ -1,0 +1,7 @@
+
+        Class Test {
+                main(){
+                    Self.call("alo");
+                }
+        }
+        

@@ -1,0 +1,8 @@
+
+        Class SinhVien {
+            getTBTL(id:Int;name:String){
+                If((Self.id==id)&&(Self.name==name)){Return Self.TBTL;}
+                Elseif((Self.id==id)&&(Self.name!=name)){Return 0;}
+            }
+        }
+        

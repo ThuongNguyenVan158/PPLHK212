@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(SinhVien),[AttributeDecl(Instance,VarDecl(Id(test),IntType,BinaryOp(==,Id(a),Id(b)))),AttributeDecl(Instance,VarDecl(Id(test1),IntType,BinaryOp(!=,IntLit(3),IntLit(2)))),AttributeDecl(Instance,VarDecl(Id(test),IntType,BinaryOp(>=,Id(a),Id(b))))])])

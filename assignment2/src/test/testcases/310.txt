@@ -1,0 +1,7 @@
+
+            Class Example2 {
+                 main(){
+                    s = New Rectangle(3,4);
+                }
+            }
+        

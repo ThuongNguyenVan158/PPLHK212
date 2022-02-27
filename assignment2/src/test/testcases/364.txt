@@ -1,0 +1,22 @@
+
+        Class XXX { }
+        ##Class main : XXX {
+            # Self is a line comment
+            /*
+                Self is also a comment do nha ^^
+            */
+             Var a=1,b=2;
+            Var a=1.1e+1, b=2.2e+2;
+            Var a,b=1;
+             Var method(Var a; Var a,b){
+                Var $a=1,b=2;
+                Var a=1.1e+1, b=2.2e+2;
+                Var a,b;
+                Return a;
+            }
+             method1(Var a; Var a,b){
+                Var $a=1,b=2;
+                Return 1;
+            }
+        }
+        ##

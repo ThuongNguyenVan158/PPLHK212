@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(AVL),[MethodDecl(Id($root),Static,[param(Id(Node),IntType),param(Id(Left),IntType),param(Id(Right),IntType)],Block([For(Id(i),IntLit(1),IntLit(3),IntLit(1),Block([AssignStmt(ArrayCell(Id(Left),[Id(i)]),ArrayCell(Id(Left),[IntLit(0)]))])])]))])])

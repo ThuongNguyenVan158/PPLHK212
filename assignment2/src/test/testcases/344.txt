@@ -1,0 +1,10 @@
+
+        Class Operator
+        {
+            Var $operand: Int = 2;
+            main()
+            {
+                Return -1*Operator :: $operand;
+            }
+        }
+        

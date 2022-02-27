@@ -1,0 +1,10 @@
+
+        Class Test {
+            main(){
+                Return True;
+            }
+            main(arg : Array[String, 3]){
+                Return Null;
+            }
+        }
+        

@@ -1,0 +1,6 @@
+
+        Class BK {
+            Val $static: Int = 23;
+            Var a,b,c: Float = 58.5,3,6;
+        }
+        

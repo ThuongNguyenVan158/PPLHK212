@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(BK),[AttributeDecl(Static,ConstDecl(Id($static),IntType,IntLit(23))),AttributeDecl(Instance,VarDecl(Id(a),FloatType,FloatLit(58.5))),AttributeDecl(Instance,VarDecl(Id(b),FloatType,IntLit(3))),AttributeDecl(Instance,VarDecl(Id(c),FloatType,IntLit(6)))])])

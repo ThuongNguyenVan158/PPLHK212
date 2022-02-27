@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Vehicle),[MethodDecl(Id(Vehicle),Instance,[],Block([Call(Id(io),Id(writeVarLn),[StringLit(Self is a Vehicle)])]))]),ClassDecl(Id(FourWheeler),[MethodDecl(Id(FourWheeler),Instance,[],Block([Call(Id(io),Id(writeVarLn),[StringLit(Self is a 4 wheeler Vehicle)])]))]),ClassDecl(Id(Car),Id(Vehicle),[])])

@@ -1,0 +1,5 @@
+
+        Class Program:sv{
+            Var q,$s,c:String= "My", " name" ,"is Thuong";
+            }
+        

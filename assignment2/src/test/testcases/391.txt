@@ -1,0 +1,12 @@
+
+        Class Operator
+        {
+            Var a,sum: Int=0,New Operator("hien",1230).new;
+            main(){
+               Foreach( a In 1 .. 100 ){
+                    If (sum==2) {Break;}
+                    Else {sum = sum+a;}
+                }
+            }
+        }
+        

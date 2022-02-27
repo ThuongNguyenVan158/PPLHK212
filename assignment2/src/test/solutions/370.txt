@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Test),[MethodDecl(Id(main),Instance,[],Block([Call(Self(),Id(call),[StringLit(alo)])]))])])

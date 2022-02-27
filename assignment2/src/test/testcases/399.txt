@@ -1,0 +1,5 @@
+
+        Class SinhVien:BK {
+            Var test: Boolean = !(3==2)||(2==3)&&(2==2);
+            Var test1: String = "abc";
+        }

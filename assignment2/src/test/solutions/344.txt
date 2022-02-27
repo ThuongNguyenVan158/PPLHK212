@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Operator),[AttributeDecl(Static,VarDecl(Id($operand),IntType,IntLit(2))),MethodDecl(Id(main),Instance,[],Block([Return(BinaryOp(*,UnaryOp(-,IntLit(1)),FieldAccess(Id(Operator),Id($operand))))]))])])

@@ -1,0 +1,18 @@
+
+        Class XXX { }
+        Class main : XXX {
+            method(a: Int;a,b: String){
+                If (flag) {
+                    a = b;
+                    }
+                Else{ a = b+1;}
+                Return a;
+            }
+             method1(a: Int;a,b: String){
+                value = x.foo(5);
+                l[3] = value / 2;
+                r = 2.0;
+                s = r*r*Self.myPI;
+                Return 1;
+            }
+        }

@@ -1,0 +1,12 @@
+
+        Class Shape {
+            Var length,width: Int = 2,5;
+            $getArea() {
+                Return Self.length*Self.width;
+            }
+            Shape(length,width: Float){
+                Self.length = length;
+                Self.width = width;
+            }
+        }
+            

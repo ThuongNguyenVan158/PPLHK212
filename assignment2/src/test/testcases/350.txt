@@ -1,0 +1,8 @@
+
+        Class Maim {
+             main(){
+                Val a : A =New A("Hello world");
+                a.boo()[2] = b.boo[a.boo() +3];
+            }
+        }
+        

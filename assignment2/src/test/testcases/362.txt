@@ -1,0 +1,9 @@
+
+        Class Shape:Shape {
+            Val $numOfShape,numOfShape: Int=1,2;
+            Var x: Float;
+            $getNumOfShape() {
+                Return hey::$numOfShape;
+            }
+        }
+        

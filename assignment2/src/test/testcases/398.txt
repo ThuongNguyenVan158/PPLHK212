@@ -1,0 +1,4 @@
+Class SinhVien {
+            Var test: Int = (a==b);
+            Var test1,test: Int = (3!=2), a>=b;
+        }

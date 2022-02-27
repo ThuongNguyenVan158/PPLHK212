@@ -1,0 +1,9 @@
+
+        Class XXX { }
+        Class main : XXX {
+            Var a: Boolean = True;
+            Var a,b : Int=1,1;
+            method(a,b: A; a: B){
+                Return Null;
+            }
+        }

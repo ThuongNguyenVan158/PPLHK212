@@ -1,0 +1,12 @@
+
+        Class Test {
+            abc(){}
+            abc(){}
+            abc(){}
+            abc(){}
+            print(){
+                Self.abc();
+            }
+
+        }
+        

@@ -1,0 +1,9 @@
+
+        Class Operator
+        {
+            main()
+            {
+                Return 1>=2;
+            }
+        }
+        

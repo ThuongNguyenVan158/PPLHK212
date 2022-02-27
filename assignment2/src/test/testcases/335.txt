@@ -1,0 +1,13 @@
+
+        Class sinhvien
+        {
+            Val masinhvien, ten, quequan : String;
+            Var tuoi : Int;
+            Var Diem : Array[Float, 11]; 
+            di(){
+                Foreach(i In 0 .. 10){
+                    Self.Print(Self.Diem[i]);
+                    }
+            }
+        }
+        

@@ -1,0 +1,21 @@
+
+        Class Operator
+        {
+            Var a: Int =0;
+            main()
+            {
+                Foreach ( i In 1 .. 100) {
+                    If (i%2 == 0) {
+                        Self.print(i);
+                        }
+                    Else{
+                        Continue;
+                        }
+                }
+            }
+            print(i : Int)
+            {
+                Return i.__str__();
+            }
+        }
+        

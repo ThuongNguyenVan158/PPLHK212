@@ -1,0 +1,17 @@
+
+        Class Student {
+            Val id : Int;  
+            Var salary: Int; 
+            Val name : String; 
+            $getName()
+            {
+                Return Self.name;
+            }
+        }
+        Class Score : Student{
+            Val idScore : Int;
+            Run(){
+                Student :: $getName();
+            }
+        }
+        

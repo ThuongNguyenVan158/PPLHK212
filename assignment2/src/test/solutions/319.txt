@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Test),[MethodDecl(Id(abc),Instance,[],Block([])),MethodDecl(Id(abc),Instance,[],Block([])),MethodDecl(Id(abc),Instance,[],Block([])),MethodDecl(Id(abc),Instance,[],Block([])),MethodDecl(Id(print),Instance,[],Block([Call(Self(),Id(abc),[])]))])])

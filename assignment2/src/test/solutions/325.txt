@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Test),[MethodDecl(Id(Convertfloattoint),Instance,[param(Id(a),FloatType)],Block([Return(CallExpr(Self(),Id(int),[Id(a)]))])),MethodDecl(Id(a),Instance,[param(Id(a),ArrayType(3,IntType)),param(Id(b),IntType),param(Id(c),ArrayType(3,StringType)),param(Id(d),IntType)],Block([Return(NullLiteral())]))])])

@@ -1,0 +1,7 @@
+
+        Class A {
+            methodA() {
+                Var _: Int=0x12A_F;
+            }
+        }
+        

@@ -1,0 +1,10 @@
+
+        Class Test {
+            Convertfloattoint(a: Float){
+                Return Self.int(a);
+            }
+           a(a : Array[Int, 3]; b: Int; c: Array[String, 3]; d: Int){
+               Return Null;
+           }
+        }
+        

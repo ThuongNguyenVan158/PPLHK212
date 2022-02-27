@@ -1,0 +1,23 @@
+
+        Class Triangle : Shape {
+        Var length, width : Float;
+        Var a, $b,$c,d : Float = 1.1,2.2,3.4,4.4;
+        getArea(){
+                Return Self.length*Self.width / 2;
+            }
+        $getCircle(){
+                Return a*Triangle:: $b*Triangle::$c / 2;
+            }
+        }
+        Class Program{
+            main(arg: String)
+            {
+                Return 0;
+            }
+            main()
+            {
+                Var a: Triangle;
+                a.getArea();
+            }
+        }
+        

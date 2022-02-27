@@ -1,0 +1,9 @@
+
+        Class main{
+            method(){
+            array[3][2]=2*3;
+            a=array[3][3];
+            a=a.sinhvien()[3];
+            }
+        }
+        

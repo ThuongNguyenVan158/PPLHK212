@@ -1,0 +1,10 @@
+
+        Class Test {
+            square ( x : Int)  
+            {
+                Var p :Int = 1;
+                p = x * x ;
+                Return  p;
+            }
+        }
+        

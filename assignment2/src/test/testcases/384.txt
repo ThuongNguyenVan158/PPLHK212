@@ -1,0 +1,11 @@
+
+        Class SinhVien {
+            getTBTL(id:Int;name:String){
+                Foreach(a In 1 .. 100 By 5)
+                {
+                    a=2*3;
+                    If(a!=0){Return;}
+                }
+            }
+        }
+        

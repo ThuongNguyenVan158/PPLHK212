@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Test),[MethodDecl(Id(main),Instance,[],Block([VarDecl(Id(A),ClassType(Id(Test)),NewExpr(Id(A),[])),VarDecl(Id(B),ClassType(Id(Test)),NewExpr(Id(B),[])),VarDecl(Id(temp),ClassType(Id(Test)),NewExpr(Id(C),[])),Call(Id(Other),Id(prVarf),[StringLit(Please enter the 1st number : )])]))])])

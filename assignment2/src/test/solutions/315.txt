@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Example2),[MethodDecl(Id(test),Instance,[],Block([For(Id(i),IntLit(1),IntLit(100),IntLit(1),Block([Call(Id(io),Id(writeIntLn),[Id(i)]),AssignStmt(ArrayCell(Id(Intarray),[Id(i)]),BinaryOp(+,Id(i),IntLit(1)))])]),For(Id(x),IntLit(100),IntLit(0),IntLit(1),Block([Call(Id(io),Id(writeIntLn),[Id(x)])])])]))])])

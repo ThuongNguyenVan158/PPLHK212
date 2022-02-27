@@ -1,0 +1,13 @@
+
+        Class Example2 {
+            test(){
+                ## start of declaration part##
+                Var r,s : Float ;
+                Val a,b : Array[Int,5];
+                ## list of statements##
+                r=2.0;
+                s=r*r*Self.myPI;
+                a[0]= s;
+                }
+        }
+        

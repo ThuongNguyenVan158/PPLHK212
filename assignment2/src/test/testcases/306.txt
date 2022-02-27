@@ -1,0 +1,18 @@
+
+        Class Example1 {
+           factorial(n: Int){
+                If (n == 0) {
+                    Return 1;
+                }
+                Else {
+                     Return n * Self.factorial(n - 1);
+                     }
+            }
+        }
+        Class Example2 : Example1{
+            main(){
+                Var x : Int = 5;
+                io.writeIntLn(Self.factorial(x));
+            }
+        }
+            

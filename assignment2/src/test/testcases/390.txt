@@ -1,0 +1,18 @@
+
+        Class LinkList{
+            Var head,tail: Node = Null,Null;
+            Var length: Int=0;
+            append(value:Int){
+                If(length==0){
+                    Self.head= New Node(value);
+                    Self.tail=head;
+
+                } Else{
+                    Var temp: Node= Self.tail;
+                    Self.tail= New Node(value);
+                    temp.nextNode=Self.tail;
+                }
+                Self.length=Self.length+1;
+            }
+        }
+        

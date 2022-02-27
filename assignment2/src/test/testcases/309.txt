@@ -1,0 +1,18 @@
+
+    Class Triangle : Shape {
+        getArea(){
+            Return Self.length*Self.width / 2;
+        }
+    }
+    Class Program{
+        main(arg: String)
+        {
+            Return 0;
+        }
+        main()
+        {
+            Var a: Triangle;
+            a.getArea();
+        }
+    }
+            

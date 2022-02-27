@@ -1,0 +1,7 @@
+
+        Class XXX { }
+        Class main : XXX {
+            Var $a,b: Int=1,2;
+            Var $a, b : Float=1.1e+1,2.2e+2;
+            Var a,b : Int=1, 3;
+        }

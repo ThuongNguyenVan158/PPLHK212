@@ -1,0 +1,18 @@
+
+        Class Student {
+            Val id : Int;  
+            Var salary: Int; 
+            Val name : String; 
+            Contructor(){
+                Self.id = 1;
+                Self.salary = 1000;
+                Self.name = "Thuong";
+            }
+            Detructor(){
+
+            }
+            display() {
+                Return Self.print(Self.id + Self.salary +Self.name);
+            }
+        }
+        

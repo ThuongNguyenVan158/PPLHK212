@@ -1,0 +1,12 @@
+
+     Class Person {
+            Val firstName : String = "Thuong"; 
+            Val lastName: String = "Thuong";
+            Var age: Int = 22;
+            c(){
+                s = a + b + c * d;
+                d = a && b;
+                e = !a;
+            }
+    }
+            

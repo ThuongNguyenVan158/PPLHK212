@@ -1,0 +1,15 @@
+
+        Class Test {
+            main(){
+                If(x<1){
+                    a =1;
+                }Elseif((x>1) && (x<5) ){
+                    a=2;
+                }Elseif((x>5) && (x>10) ){
+                    a =3.5;
+                }Else { 
+                    a= 0;
+                }
+            }
+        }
+        

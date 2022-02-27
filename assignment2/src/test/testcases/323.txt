@@ -1,0 +1,8 @@
+
+        Class Test {
+            a(abc: ABC){
+                Return ABC.__str__();
+            }
+                
+        }
+        

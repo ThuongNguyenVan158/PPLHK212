@@ -1,0 +1,13 @@
+
+        Class Person {
+            Val firstName : String = "Thuong"; 
+            Val lastName: String = "Thuong";
+            Var age: Int = 22;
+            Contructor(fname, lname: String; age : Int)
+            {
+                Self.firstName = fname;
+                Self.lastName = lname;
+                Self.age = age;
+            }
+        }
+    

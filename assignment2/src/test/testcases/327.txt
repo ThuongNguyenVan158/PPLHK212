@@ -1,0 +1,19 @@
+
+        Class Program {
+            main()
+            {
+                Var i : Int;
+                i = 8;
+                test.printf("Factorial of the number is ", i, test.factorial(i));
+                Return 0;
+            }
+            factorial(i : Int)
+            {
+                If(i < 2)
+                {
+                    Return 1;
+                }
+                Return i * Test.factorial(i - 1);
+                }
+            }
+        

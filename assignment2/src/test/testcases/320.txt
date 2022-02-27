@@ -1,0 +1,9 @@
+
+        Class Test {
+            abc__bc_ab(c : Int){
+            }
+            print(a: String){
+                a.printf("hello" +. a.toString());
+            }
+        }
+        

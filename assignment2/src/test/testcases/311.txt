@@ -1,0 +1,18 @@
+
+            Class Example2 {
+                Var a, b, c : Int;
+                Var x, y, z : String;
+                Var g, h, y : Boolean;
+                nty(){
+                    Return;
+                }
+                Var x, y, z : Array[Int, 3];
+                Var q, w : Exp1 = New A(), New B();
+                Val a : A = New A();
+            ##
+                =======================================
+                Comment here
+                =======================================
+            ##
+            }
+        

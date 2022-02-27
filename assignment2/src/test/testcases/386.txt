@@ -1,0 +1,6 @@
+
+        Class A {
+            methodA(a,b:Array[Int,5];c:Int) {
+            }
+        }
+        

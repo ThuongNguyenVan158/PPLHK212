@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(sv),[AttributeDecl(Instance,VarDecl(Id(q),StringType,StringLit(My))),AttributeDecl(Static,VarDecl(Id($s),StringType,StringLit( name))),AttributeDecl(Instance,VarDecl(Id(c),StringType,StringLit(is Thuong)))])])

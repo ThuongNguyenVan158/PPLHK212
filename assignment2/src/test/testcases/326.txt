@@ -1,0 +1,9 @@
+
+        Class Test {
+            main()
+            {
+                a = New Exp(1,2,4);
+                Self.print(i);
+            }
+        }
+        

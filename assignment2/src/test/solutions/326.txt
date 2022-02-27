@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Test),[MethodDecl(Id(main),Instance,[],Block([AssignStmt(Id(a),NewExpr(Id(Exp),[IntLit(1),IntLit(2),IntLit(4)])),Call(Self(),Id(print),[Id(i)])]))])])

@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Example2),[MethodDecl(Id(test),Instance,[],Block([VarDecl(Id(r),FloatType),VarDecl(Id(s),FloatType),ConstDecl(Id(a),ArrayType(5,IntType),None),ConstDecl(Id(b),ArrayType(5,IntType),None),AssignStmt(Id(r),FloatLit(2.0)),AssignStmt(Id(s),BinaryOp(*,BinaryOp(*,Id(r),Id(r)),FieldAccess(Self(),Id(myPI)))),AssignStmt(ArrayCell(Id(a),[IntLit(0)]),Id(s))]))])])

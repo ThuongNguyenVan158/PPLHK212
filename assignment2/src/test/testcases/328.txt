@@ -1,0 +1,21 @@
+
+        Class Test {
+            main()
+            {
+                If (flag*fag) 
+                    {a=1;
+                    }
+                Else{
+                    If (flag&&flag)
+                        {a=2;}
+                    Else{
+                        If (flag || flag) 
+                           { a=3;}
+                        Else{
+                            Return 0;
+                        }
+                    }
+                }
+            }
+        }
+        

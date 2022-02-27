@@ -1,0 +1,16 @@
+
+        Class Callback
+        {
+            main(){
+                If(1){
+                    If(1){
+                        If(1){
+                            If(1){
+                                Return 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        

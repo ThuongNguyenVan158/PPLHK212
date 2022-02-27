@@ -1,0 +1,10 @@
+
+        Class Test {
+            main(){
+                a = Other.b() + Other.c() + Other.d();
+                Other.print(a);
+                a = a / Other.sum(a,b) + Other.sub(a,b);
+                Other.print(a);
+            }
+        }
+        

@@ -58,8 +58,13 @@ class ASTGeneration(D96Visitor):
             if len(attlist[0]) == 3:
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
-                        attdecl += [AttributeDecl(inst, VarDecl(attlist[i][0], attlist[i][2]))]
-                    else: attdecl += [AttributeDecl(stat, VarDecl(attlist[i][0], attlist[i][2]))]
+                        if type(attlist[i][2]) == ClassType:
+                            attdecl += [AttributeDecl(inst, VarDecl(attlist[i][0], attlist[i][2], NullLiteral()))]
+                        else: attdecl += [AttributeDecl(inst, VarDecl(attlist[i][0], attlist[i][2]))]
+                    else: 
+                        if type(attlist[i][2]) == ClassType:
+                            attdecl += [AttributeDecl(stat, VarDecl(attlist[i][0], attlist[i][2], NullLiteral()))]
+                        else: attdecl += [AttributeDecl(stat, VarDecl(attlist[i][0], attlist[i][2]))]
             else: 
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
@@ -71,8 +76,13 @@ class ASTGeneration(D96Visitor):
             if len(attlist[0]) == 3:
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
-                        constattdecl += [AttributeDecl(inst, ConstDecl(attlist[i][0], attlist[i][2]))]
-                    else: constattdecl += [AttributeDecl(stat, ConstDecl(attlist[i][0], attlist[i][2]))]
+                        if type(attlist[i][2]) == ClassType:
+                            constattdecl += [AttributeDecl(inst, ConstDecl(attlist[i][0], attlist[i][2], NullLiteral()))]
+                        else: constattdecl += [AttributeDecl(inst, ConstDecl(attlist[i][0], attlist[i][2]))]
+                    else: 
+                        if type(attlist[i][2]) == ClassType:
+                            constattdecl += [AttributeDecl(stat, ConstDecl(attlist[i][0], attlist[i][2], NullLiteral()))]
+                        else: constattdecl += [AttributeDecl(stat, ConstDecl(attlist[i][0], attlist[i][2]))]
             else: 
                 for i in range(len(attlist)):
                     if attlist[i][1] == "nonstatic":
@@ -261,7 +271,9 @@ class ASTGeneration(D96Visitor):
             vardecl = []
             if len(varli[0]) == 2:
                 for i in range(len(varli)):
-                    vardecl += [VarDecl(varli[i][0], varli[i][1])]
+                    if type(varli[i][1]) == ClassType:
+                        vardecl += [VarDecl(varli[i][0], varli[i][1], NullLiteral())]
+                    else: vardecl += [VarDecl(varli[i][0], varli[i][1])]
             else: 
                 for i in range(len(varli)):
                     vardecl += [VarDecl(varli[i][0], varli[i][1], varli[i][2])]
@@ -270,7 +282,9 @@ class ASTGeneration(D96Visitor):
             constdecl = []
             if len(varli[0]) == 2:
                 for i in range(len(varli)):
-                    constdecl += [ConstDecl(varli[i][0], varli[i][1])]
+                    if type(varli[i][1]) == ClassType:
+                        constdecl += [ConstDecl(varli[i][0], varli[i][1], NullLiteral())]
+                    else: constdecl += [ConstDecl(varli[i][0], varli[i][1])]
             else: 
                 for i in range(len(varli)):
                     constdecl += [ConstDecl(varli[i][0], varli[i][1], varli[i][2])]
@@ -383,7 +397,7 @@ class ASTGeneration(D96Visitor):
     def visitSteploop(self, ctx: D96Parser.SteploopContext):
         if ctx.getChildCount() == 2:
             return [self.visit(ctx.exp())]
-        else: return []
+        else: return [IntLiteral(1)]
     #break_stm: BREAK SM;
     def visitBreak_stm(self, ctx: D96Parser.Break_stmContext):
         return Break()

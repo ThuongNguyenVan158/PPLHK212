@@ -1,0 +1,12 @@
+
+        Class Example2 {
+            test(){
+                If (flag) {
+                    r=2.0;
+                    }
+                Else{
+                    a[0]= s; 
+                    }
+                }
+            }
+         

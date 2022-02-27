@@ -1,0 +1,10 @@
+
+        Class Test {
+            main()
+            {
+            Var A, B, temp : Test = New A(), New B(), New C();
+
+            Other.prVarf("Please enter the 1st number : ");
+            }
+            }
+        

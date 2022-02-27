@@ -1,0 +1,9 @@
+
+        Class Integer{
+            gcd(a:Int; b:Int){
+            If ((a == 0) || (b == 0)){
+            Return a + b;
+            }
+            }
+            }
+        

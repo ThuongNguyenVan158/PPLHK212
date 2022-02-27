@@ -1,0 +1,12 @@
+
+        Class XXX { }
+        Class main : XXX {
+            ## Self is a line comment
+            ##
+            Var a: Int=1;
+            Var a: Float=1.1e+1;
+            Val b: Float =2.2e+2;
+            method(a: XXX; a,b: XXX){
+                Return a;
+            }
+        }
