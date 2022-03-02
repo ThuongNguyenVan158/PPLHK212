@@ -1,0 +1,14 @@
+
+               Class Ulities{
+                    sort(list:Array[Int,10]){
+                        Var i,j:Int=0,0;
+                        Foreach( i In 0 .. list.length-1 ){
+                           Foreach(j In 0 .. list.length-i-1){
+                               If(list[j] > list[j+1]){
+                                   a.swap(list[j], list[j+1]);
+                               }
+                           }
+                        }
+                  }
+                }
+               

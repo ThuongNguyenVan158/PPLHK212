@@ -1,6 +1,1 @@
-
-                    Class Sv:BK{
-                        sv(){
-                            d.sv(1,0,03,0x34_3,0x0,0b0,0B1);
-                        }
-                    }
+Class Shape {getArea(){Return x || y;}}

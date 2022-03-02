@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var x,y,z,k,m,l:Int=06_2,0xA8_F,0XA8F,0b10_01,0B1001,1_234;
-                    }
+Class Shape {getArea(output:Int){}}

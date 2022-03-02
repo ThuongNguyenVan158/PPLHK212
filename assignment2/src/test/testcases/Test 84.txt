@@ -1,0 +1,13 @@
+Class Program{
+            main(){
+                If (((Null == Self))){
+                    Foreach (i In True..False){
+                        i = i*Self.main();
+                    }
+                }
+                Elseif (Array(Array(a)) ==. a){
+                    Program::$main();
+                }
+            }
+        }
+        

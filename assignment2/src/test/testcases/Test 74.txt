@@ -1,0 +1,12 @@
+
+        Class Test {
+            Test(khang: String){
+                If(1 < 2 || 3){
+                    a = Self.a.b.c + shape::$length / shape.length;
+                }
+                Else {
+                    Return;
+                }
+            }
+        }
+        

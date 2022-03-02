@@ -1,0 +1,8 @@
+ Class a{
+            Val $instance: a = Self;
+            $doSomething(){
+                Program::$print(a::$instance);
+                Program::$print("done");
+            }
+        }
+        

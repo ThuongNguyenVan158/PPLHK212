@@ -1,0 +1,1 @@
+Class Square:Shape {Var length:Float; getArea(){Return Self.length*Self.length;}}

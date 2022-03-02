@@ -1,8 +1,1 @@
-Class Program{
-                        main(){
-                            d.dv();
-                            Return d.d;
-                            Return d.dv();
-                        }
-                    }
-                    
+Class University {Val name,principle:String;Val manganh:Array[Int,100];Val tennganh:Array[String,100];}

@@ -1,7 +1,1 @@
-Class Program{
-                        main(){
-                            d::$dv(1,2,3);
-                            Return d::$dv(1,2,3);
-                            Return d::$d;
-                        }
-                    }
+Class BachKhoa:University{Contructor(){name="Bach Khoa";principle="Mai Thanh Phong";}}

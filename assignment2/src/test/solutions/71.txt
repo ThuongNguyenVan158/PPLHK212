@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(SV),Id(sv),[])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([Return(BinaryOp(%,Id(x),Id(y)))]))])])

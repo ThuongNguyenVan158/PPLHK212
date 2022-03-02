@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([Return(IntLit(13))]))]),ClassDecl(Id(A),[MethodDecl(Id(main),Instance,[],Block([Call(Id(a),Id(b),[Self()])]))]),ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([If(Id(a),Block([Continue]))]))])])

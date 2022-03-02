@@ -1,0 +1,9 @@
+
+            Class main{
+                Var $a, $b: Int = shape::$x, class::$y;
+                Val c, $d: Float = Self.abc, xyz::$a;
+                $ha_ha_ha(){
+                    Self.a = a[1][2];
+                }
+            }
+            

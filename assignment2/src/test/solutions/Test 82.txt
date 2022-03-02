@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(Parent),[MethodDecl(Id(main),Instance,[param(Id(hien),StringType)],Block([ConstDecl(Id(a),ClassType(Id(b)),NullLiteral()),VarDecl(Id(c),ClassType(Id(d)),FieldAccess(FieldAccess(FieldAccess(Self(),Id(a)),Id(b)),Id(c)))]))])])

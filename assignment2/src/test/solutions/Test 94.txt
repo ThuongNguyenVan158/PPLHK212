@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Pro3),[MethodDecl(Id($main),Static,[],Block([AssignStmt(Id(a),NewExpr(Id(b),[])),AssignStmt(Id(b),CallExpr(Id(a),Id($foo),[])),AssignStmt(Id(c),FieldAccess(Id(b),Id($a)))]))])])

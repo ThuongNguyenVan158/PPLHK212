@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var q,$s,c:String="hey","This is a \\\b\f\r\n\t\' string containing tab \t","He asked me: '"Where is John?'"";
-                     }
+Class Shape {getArea(output1,output2:Int;input1,input2:Float){}}

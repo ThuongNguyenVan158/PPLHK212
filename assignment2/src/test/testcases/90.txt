@@ -1,5 +1,1 @@
-
-                    Class Sv:BK{
-                        Var c:String=(-4)+4;
-                        Val d:Boolean=(!True) && True;
-                    }
+Class Test {visitProgram(ctx:ProgramContext) {Val ret:Array[String,100]=Self.visit(ctx.classes);}}

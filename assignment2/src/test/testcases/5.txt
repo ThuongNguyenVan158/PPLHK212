@@ -1,5 +1,1 @@
-Class Shape:Vu {
-                        Val $numOfShape: Int = 0;
-                        Val immutableAttribute: Int = 0;
-                        Var length, width: Int;
-                    }
+Class Shape {Val length:Int;}

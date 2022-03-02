@@ -1,17 +1,1 @@
-
-        Class Operator {
-            Val x,y : Int=Array(),1;
-            add(){
-               X.add(x);
-            }
-            remove(x,y:Int){
-               If(x==y)
-               {
-                  X.remove(x);
-               }
-               Else{
-                  Break;
-               }
-            }
-            }
-        
+Class Factor {Calculate(x,y:Int) {If (y>0) {Return x*Self.Calculate(x,y-1);} Else {Return 1;}}}

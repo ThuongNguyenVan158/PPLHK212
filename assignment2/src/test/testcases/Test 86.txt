@@ -1,0 +1,10 @@
+Class Program: Parent{
+            main(){
+                Break;
+            }
+        }
+        Class a:A{}
+        Class b:B{
+            Val c: a;
+        }
+        

@@ -1,0 +1,11 @@
+
+                    Class Program:sv{
+                       Val x,y,$z: Khang;
+                       Test() {
+                            a.b = 0x123 + 0b111001 + 012345 / (0.e10) % 00 * 0xABCD123;
+                            Self.a.b = 0x123 + 120 % 5 + (a==b);
+                            Break;
+                            Continue;
+                       }
+                     }
+                     

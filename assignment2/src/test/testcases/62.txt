@@ -1,3 +1,1 @@
-Class Program:sv{
-                            Var q,$s:Boolean=True,False;
-                         }
+Class Shape {getArea(){Return x<=y;}}

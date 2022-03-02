@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var x:Array[Int,3]=Array(vu[1][2][3],yeu[3/4+5],tho[New Tho(2)]);
-                     }
+Class Shape {getArea(){If (True) {} Elseif (True) {} Elseif (False) {} Else {}}}

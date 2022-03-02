@@ -1,0 +1,11 @@
+
+        Class A{
+            $Static(){
+                Val a: Array[Int, 1] = 1;
+                a.Nonstatic = "Success";
+                a::$Static = "Success";
+                ##Fail in statement##
+                a::$Static();
+            }
+        }
+        

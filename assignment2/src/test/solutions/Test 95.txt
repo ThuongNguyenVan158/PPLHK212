@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Pro),[MethodDecl(Id($main),Static,[],Block([AssignStmt(ArrayCell(Id(arr),[IntLit(1),IntLit(2)]),ArrayCell(Id(a),[IntLit(1),IntLit(2),IntLit(3),IntLit(4)])),AssignStmt(ArrayCell(Id(arr),[BinaryOp(*,IntLit(1),IntLit(2)),BinaryOp(%,IntLit(3),IntLit(4))]),ArrayCell(Id(a),[IntLit(1),IntLit(2),IntLit(3),IntLit(4)]))]))])])

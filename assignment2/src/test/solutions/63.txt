@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Program),Id(sv),[AttributeDecl(Instance,VarDecl(Id(q),ArrayType(5,IntType),[IntLit(1),IntLit(5),IntLit(7),IntLit(12)])),AttributeDecl(Static,VarDecl(Id($s),ArrayType(5,IntType),[StringLit(Kangxi),StringLit(Yongzheng),StringLit(Qianlong)])),AttributeDecl(Instance,VarDecl(Id(c),ArrayType(5,IntType),[FloatLit(1.234e-09),FloatLit(1.234e-09),FloatLit(12.34),FloatLit(320000000000.0)]))])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([Return(BinaryOp(>,Id(x),Id(y)))]))])])

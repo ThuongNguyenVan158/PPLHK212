@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Program),[MethodDecl(Id(reCalcu),Instance,[],Block([VarDecl(Id(arr),ArrayType(2,FloatType)),AssignStmt(Id(arr),[IntLit(1),FloatLit(4.44)]),Call(Id(Out),Id(printFloat),[ArrayCell(Id(arr),[IntLit(1)])]),ConstDecl(Id(arr_2),ArrayType(4,ArrayType(3,IntType)),None),AssignStmt(Id(arr_2),[[IntLit(4),IntLit(4)],[IntLit(12),FloatLit(4.4)],[FloatLit(3.2323),IntLit(0)],[IntLit(23),IntLit(56)]]),Return(Id(value))]))])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([Return(BinaryOp(==.,Id(x),Id(y)))]))])])

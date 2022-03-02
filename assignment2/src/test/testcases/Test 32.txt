@@ -1,0 +1,22 @@
+
+                    Class Program:sv{
+                       Val x,y,$z: Khang = 01234, 0b1111100, a.b.c.d;
+                       Test() {
+                            If( (ab ==. Self.b) == (a.b >= 12)){
+                                Break;
+                                Return a;
+                            }
+                            Elseif( a * b / c % d + x <= a[1][2][3]) {
+                                Val a: Khang = New Khang(Null);
+                                a.b.c = a[-10 * 2 - 10];
+                            }
+                            Elseif (False)
+                            {
+                                Return hahahaha;
+                            }
+                            Else {
+                                Continue;
+                            }
+                       }
+                     }
+                     

@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),[AttributeDecl(Instance,VarDecl(Id(item),ArrayType(3,IntType))),MethodDecl(Id(main),Static,[],Block([For(Id(i),IntLit(0),IntLit(2),IntLit(1),Block([])])]))])])

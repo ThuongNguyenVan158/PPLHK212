@@ -1,0 +1,10 @@
+Class Test {
+                Val var : Float = Self.abc499;
+                Break_Out(a, b: Int) {
+                    a::$Breakout(a, b, c);
+                    abc = 123_123_345;
+                    Test::$temp = 0123 + 0xAFF - 0B11111111;
+                    Return Self - Null/3*333*-Self;
+                }
+                Var var : Boolean = False;
+            }

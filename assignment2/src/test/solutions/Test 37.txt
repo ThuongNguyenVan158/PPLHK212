@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(A),Id(B),[MethodDecl(Id($khang),Static,[],Block([For(Id(i),IntLit(1),IntLit(10),IntLit(1),Block([AssignStmt(Id(a),BinaryOp(+,Id(a),IntLit(1))),AssignStmt(Id(b),BinaryOp(*,Id(b),IntLit(2)))])]),Break,Return(StringLit(khangpro))]))])])

@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(A),[MethodDecl(Id($Static),Static,[],Block([ConstDecl(Id(a),ArrayType(1,IntType),IntLit(1)),AssignStmt(FieldAccess(Id(a),Id(Nonstatic)),StringLit(Success)),AssignStmt(FieldAccess(Id(a),Id($Static)),StringLit(Success)),Call(Id(a),Id($Static),[])]))])])

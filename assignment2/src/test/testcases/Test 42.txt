@@ -1,0 +1,19 @@
+
+        Class A : B{
+            $khang(){
+
+            {
+                    If ( a >= 5) { }
+                    Elseif ("khang" == "hana") { }
+                    Else {Break; }
+             }
+
+             {
+                    a = x + 10;
+                    a.method(arr[1][2][3], 5);
+             }
+               Break;
+               Return 2;
+            }
+        }
+        

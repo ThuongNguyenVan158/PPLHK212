@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(A),[]),ClassDecl(Id(B),[]),ClassDecl(Id(C),[]),ClassDecl(Id(D),[])])
+Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([If(BooleanLit(True),Block([]))]))])])

@@ -1,0 +1,15 @@
+Class Test {
+                Val var : Float = Self.abc499;
+                Break_Out(a, b: Int) {
+                    If (Self) {Continue;}
+                    Elseif (Null) {Break;}
+                    Elseif (True + False) {}
+                    Else {
+                        Break;
+                        If (True) {Continue;}
+                        Else {
+                            Foreach (i In 123 .. 456 By 123) {Break;}
+                        }
+                    }
+                }
+            }

@@ -1,0 +1,7 @@
+Class Program{
+            Constructor(){
+                Self.a = 1;
+                Self.a = Self.constructor();
+            }
+        }
+        

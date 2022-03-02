@@ -1,0 +1,7 @@
+Class Progran{
+            main(){
+                Return False ==. True + "something" || Array(Self, "a thing") * 0765 % !0xFFF;
+            }
+        }
+
+        

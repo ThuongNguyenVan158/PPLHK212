@@ -1,7 +1,1 @@
-
-            Class Test : khang{
-                Val khang, $x, num_of_shape: Int = 1, 2, 3;
-                Var $b, c: Array[Int,3] = Array(1,2,3), Array("tao", "la", "khang");
-            }
-
-            
+Class Program {main(){Break;}}

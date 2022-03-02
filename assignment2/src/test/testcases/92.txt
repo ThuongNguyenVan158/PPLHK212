@@ -1,15 +1,1 @@
-
-               Class Integer{
-                   sortArray(a:Array[Int,10]){
-                    Var i,j:Int=0,0;
-                    Foreach( i In 0 .. list.length-1 ){
-                        Foreach(j In 0 .. list.length-i-1){
-                            If(list[j] > list[j+1]){
-                            array.swap(list[j], list[j+1]);
-                        }
-                    }
-                    }
-                    Return a;
-                }
-                }
-               
+Class Test {visitConstructor(ctx:ConstructorContext) {Var k:Instance;Var name:String=AST.Id("Constructor");If (ctx.lstparam()) {Return AST.MethodDecl(kind, name);}}}

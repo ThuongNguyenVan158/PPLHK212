@@ -1,0 +1,8 @@
+
+                Class Program{
+                    Var item:Array[Int,3];
+                    main() {
+                        Foreach(i In 0 .. 2) {}
+                    }
+                }
+                

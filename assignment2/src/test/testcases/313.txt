@@ -3,7 +3,7 @@
             test(){
                 ## start of declaration part##
                 Var r,s : Float ;
-                Val a,b : Array[Int,5];
+                Val a,b : Array[Int,0x101];
                 ## list of statements##
                 r=2.0;
                 s=r*r*Self.myPI;

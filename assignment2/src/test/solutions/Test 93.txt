@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Pro3),[MethodDecl(Id(main),Instance,[],Block([VarDecl(Id(a),ArrayType(21,IntType),[IntLit(1),FloatLit(1.2),Id(a)]),ConstDecl(Id(b),ArrayType(10,StringType),[Id(b),Id(c),Id(d)]),ConstDecl(Id(c),ArrayType(10,StringType),StringLit(minh))]))])])

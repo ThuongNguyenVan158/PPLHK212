@@ -1,0 +1,17 @@
+
+        Class Operator {
+            Val x,y : Int=Array(),1;
+            add(){
+               X.add(x);
+            }
+            remove(x,y:Int){
+               If(x==y)
+               {
+                  X.remove(x);
+               }
+               Else{
+                  Break;
+               }
+            }
+            }
+        

@@ -1,0 +1,7 @@
+Class Program: Parent{
+            main(hien: String){
+                Val a: b;
+                Var c: d = Self.a.b.c;
+            }
+        }
+        

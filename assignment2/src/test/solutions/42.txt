@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Test),Id(khang),[AttributeDecl(Instance,ConstDecl(Id(a),IntType,None)),AttributeDecl(Static,ConstDecl(Id($b),IntType,None)),AttributeDecl(Instance,ConstDecl(Id(c),IntType,None)),AttributeDecl(Static,VarDecl(Id($b),ArrayType(5,IntType))),AttributeDecl(Instance,VarDecl(Id(d),ArrayType(5,IntType)))])])
+Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([For(Id(x),BooleanLit(True),BooleanLit(False),IntLit(1),Block([])])]))])])

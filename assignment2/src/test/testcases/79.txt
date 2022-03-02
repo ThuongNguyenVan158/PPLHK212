@@ -1,4 +1,1 @@
-Class SV{
-                        Val a:Boolean="dinh"==."dinh";
-                        Var b:String="dinh"+."1913114";
-                    }
+Class Shape {getArea(){Return x::$length(1,2,3);}}

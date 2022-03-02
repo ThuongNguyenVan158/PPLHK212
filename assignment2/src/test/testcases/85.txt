@@ -1,8 +1,1 @@
-
-                    Class Sv:BK{
-                        main(){
-                            Val a:Array[Int,3]=Array(1,2,3);
-                            Var b,c: Array[Array[String,3],2]=Array(1,2,3),Array(
-                                Array("dinh","doan","lan"),Array("dinh","doan","lan"));
-                        }
-                    }
+Class SinhVien {Var MSSV:String; Var maKhoa:Int; Contructor(a:String;b:Int){MSSV=a;maKhoa=b;}}

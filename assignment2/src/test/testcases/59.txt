@@ -1,8 +1,1 @@
-
-            Class A{
-                $khang(){
-                    Var a: Boolean = True;
-                    Val a, b: Array[Array[Array[Boolean,5],2],3] = Array() , Array(Array(Array(1,2),Array(3,4)), Array(Array("khang","hana")));
-                }
-            }
-            
+Class Shape {getArea(){Return x==y;}}

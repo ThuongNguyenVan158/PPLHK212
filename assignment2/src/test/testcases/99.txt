@@ -1,15 +1,1 @@
-Class ABC {
-            method() {
-            Val a : Array[Int,3] = Array(1);
-            Foreach(a In 1 .. a By a/2)
-            {
-               If(a>10)
-               {
-                  io.Print("A >10");
-               }
-               Else{
-                  Continue;
-               }
-            }
-            }
-            }
+Class Rectangle:Shape {Calculation(){Shape.agetArea(142,00,073,0X34_3,0X3450,0b100,0B11);}}

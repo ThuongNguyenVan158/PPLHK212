@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(SV),[MethodDecl(Id(main),Instance,[],Block([Return(BinaryOp(&&,BinaryOp(||,BinaryOp(&&,Id(a),Id(b)),Id(c)),Id(d)))]))])])

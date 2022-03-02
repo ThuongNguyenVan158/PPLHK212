@@ -1,0 +1,7 @@
+
+            Class Test {
+                Val a, b, c: Int;
+                Var b, d: Float;
+            }
+
+            

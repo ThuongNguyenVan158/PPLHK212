@@ -1,0 +1,12 @@
+
+                Class Program{
+                    Var id:Int;
+                    main() {
+                        If (!!True) {}
+                        Elseif (Self.id + 0xAB) {}
+                        Elseif (Self.id[1]) {}
+                        Elseif (-----2) {}
+                        Else {}
+                    }
+                }
+                

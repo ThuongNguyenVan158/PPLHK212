@@ -1,0 +1,13 @@
+
+            Class A{
+                Val A:Int = Array(1,2,3,4);
+                $method(){
+                    Val A: Array[Int,0x123] = Array(0x0, 1+1, 5>8);
+                    Val A: Array[Int,0x123AF] = Array(0b11001, Self.a[1], Self.method());
+                    Val A: Array[Int,012_1254] = Array(0123, "Hello", Array(1,2,3));
+                    Val A: Array[Int,0B11001] = Array(1+1, Array(Array(1,2), Array(2,3)));
+
+                }
+                Val A:Int = Array(1,2,3,4);
+                }
+            

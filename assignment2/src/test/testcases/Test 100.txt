@@ -1,0 +1,6 @@
+
+                Class Program{
+                    Var a,b,$c : Boolean;
+                    Val d,$e: String;
+                }
+                

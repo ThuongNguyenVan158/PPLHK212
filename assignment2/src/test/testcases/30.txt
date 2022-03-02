@@ -1,5 +1,1 @@
-
-                    Class Program1:sv{
-                      main(a,b,c:Int; d,e,f:Float){}
-                     }
-                     
+Class Shape {getArea(){Break;}}

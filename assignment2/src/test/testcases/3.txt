@@ -1,5 +1,1 @@
-Class Shape:Vu {
-                        $getNumOfShape() {
-
-                        }
-                    }
+Class Shape {} Class Rectangle {}

@@ -1,0 +1,14 @@
+
+            Class Test : khang{
+                Val khang, $x: Int = 1, 2;
+                Var $b: String = "khang";
+                getMethod(c: Array[Array[Array[Int,5],3],2]; x,y: Khang){
+
+                }
+                $getMem(a, b: Int; z,y: Hana){
+                    Break;
+                    Continue;
+                }
+            }
+
+            

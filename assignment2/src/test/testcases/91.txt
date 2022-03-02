@@ -1,9 +1,1 @@
-
-                    Class Sv:BK{
-                        $get(){
-                            Var x: Vu;
-                            Var z: Vu= New Vu(); 
-                            Return;
-                            Var x: Int= Self +Self;
-                        }
-                    }
+Class Test {visitClasses(ctx:ClassesContext) {If (ctx.classes()) {Return Self.visit(ctx.clas())+Self.visit(ctx.classes());} Else {Return Self.visit(ctx.clas());}}}

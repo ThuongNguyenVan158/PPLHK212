@@ -1,0 +1,11 @@
+
+        Class main{
+            Val a, b: Array[Int, 123_456_789] = Array(1,2,3), Array(0x123ACB, 0x456, 0x789);
+
+            $GETsHAPE(){
+                Foreach(i In 1 .. 10){
+                Val b: Int = Array(Array(1,2,3),Array(4,5,6));
+                }
+            }
+        }
+        

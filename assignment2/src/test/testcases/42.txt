@@ -1,7 +1,1 @@
-
-            Class Test : khang{
-                Val a, $b, c: Int;
-                Var $b, d: Array[Int,5];
-            }
-
-            
+Class Program {main(){Foreach (x In True..False) {}}}

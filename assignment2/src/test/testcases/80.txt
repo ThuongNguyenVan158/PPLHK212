@@ -1,3 +1,1 @@
-Class SV{
-                        Var a:Boolean=(a>b) && (c<d) || (a==b) && (e!=d) ||(a>=b) || (c>=d);
-                    }
+Class Shape {getArea(){Return New x();}}

@@ -1,0 +1,10 @@
+
+                    Class Program:sv{
+                       Val x,y,$z: Khang;
+                       Test() {
+                            Val x,y: Khang = New Hana(12+3), New Love();
+                            Break;
+                            Continue;
+                       }
+                     }
+                     

@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var x: Int=Array(Self.h.k[1],Vu::$Tho, New Yeu(Vu,Tho).Vu(Self.Tho,Tho[3000]),Vu::$Yeu(Tho,New Very(Much+3000)));
-                     }
+Class Shape {getArea(){Foreach (x In True..False By True) {}}}

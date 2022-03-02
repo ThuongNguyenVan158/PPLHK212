@@ -1,11 +1,1 @@
-
-            Class Program {
-                Test() {
-                    Val a: Int = 5;
-                    a = -2;
-                    b = 1 + 2*5 - 6;
-                    b = b == 5;
-               }
-            }
-
-            
+Class Shape {getArea(){Val x,y: Int =0123,0345;}}

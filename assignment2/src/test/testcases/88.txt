@@ -1,8 +1,1 @@
-Class Program{
-                        Var a:Int;
-                        Val b:Float;
-                        Main(){
-                            a=New d();
-                            Return New d(1,2,3);
-                        }
-                    }
+Class Course {Var name:String;Var score:Int;getArea() {Return name;}}

@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([Return(IntLit(1)),Return(StringLit(dinh)),Return(BooleanLit(True)),Return(Id(a)),Return(Self()),Return(NullLiteral()),Return([IntLit(3),IntLit(4),IntLit(5)])]))])])
+Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([ConstDecl(Id(Thai),ClassType(Id(Student)),NewExpr(Id(Student),[IntLit(2010616)])),Call(Id(Thai),Id(learn),[StringLit(Principle of programming Language)])]))])])

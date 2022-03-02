@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(SV),[]),ClassDecl(Id(BK),Id(sv),[])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([Return(FieldAccess(Id(x),Id(x)))]))])])

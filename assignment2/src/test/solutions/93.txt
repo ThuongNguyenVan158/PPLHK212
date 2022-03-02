@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Integer),[MethodDecl(Id(giaiThua),Instance,[param(Id(n),IntType)],Block([If(BinaryOp(==,Id(n),IntLit(1)),Block([Return(IntLit(1))]),Block([Return(BinaryOp(*,Id(n),CallExpr(Id(Integer),Id(giaiThua),[BinaryOp(-,Id(n),IntLit(1))])))]))]))])])
+Program([ClassDecl(Id(Test),[MethodDecl(Id(visitParam),Instance,[param(Id(ctx),ClassType(Id(ParamContext)))],Block([VarDecl(Id(ret),ArrayType(175,StringType)),VarDecl(Id(lst),StringType,CallExpr(Self(),Id(visit),[CallExpr(Id(ctx),Id(idlst),[])]))]))])])

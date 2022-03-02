@@ -1,9 +1,1 @@
-Class Shape:Vu {
-                             Val My1stCons, My2ndCons: Int = 1 + 5, 2;
-                             Var $x, $y : Int = 0, 0;
-                             Constructor(x,y,z:Int;k:Float){
-                             }
-                             Destructor(){
-                             }
-                        }
-    
+Class Program {main(){}}

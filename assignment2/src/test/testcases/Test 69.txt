@@ -1,0 +1,19 @@
+
+            Class Program : khang{
+                Val khang, $x: Int = 1, 2;
+                Var $b: String = "khang";
+                main(){
+
+                }
+                $main(a, b: Int; z,y: Hana){
+                    Break;
+                    Continue;
+                }
+                main(a, b: Int; z,y: Hana){
+                    Break;
+                    Continue;
+                    Foreach(i In 1 .. 100 By a==b) { }
+                }
+            }
+
+            

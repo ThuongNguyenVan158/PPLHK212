@@ -1,4 +1,1 @@
-
-                    Class Sv:BK{
-                        Val a,$b,c,$d:Float=-12.,-.0e10,-4.54,65.3;
-                    }
+Class Program {main(argv:Int;arg:String){a=New Circle();b=New Square();If(a.getArea()<b.getArea()) {Return a;} Else {Return b;}}}

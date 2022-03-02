@@ -258,8 +258,9 @@ class ASTGeneration(D96Visitor):
         if ctx.primitive_type():
             typ = self.visit(ctx.primitive_type())
         else: typ = self.visit(ctx.array_type())
-        sizearr = self.visit(ctx.sizearray())
-        return ArrayType(sizearr, typ)
+        # sizearr = self.visit(ctx.sizearray())
+        # return ArrayType(sizearr, typ)
+        return ArrayType(self.visit(ctx.sizearray()), typ)
 
 # /****************************************************************************/
 # /*								2.2 Statement								*/
@@ -345,8 +346,11 @@ class ASTGeneration(D96Visitor):
             expr = self.visit(ctx.exp())
             listexp = self.visit(ctx.index_operator())
             if(type(expr)==ArrayCell):
-                listexp=expr.idx+listexp
                 expr=expr.arr
+                if (type(expr) != ArrayCell):
+                    listexp=expr.idx+listexp
+                
+                
             return ArrayCell(expr, listexp)
         return self.visit(ctx.exp())
     #if_stm: IF LP exp RP blockstatment elseif_stms else_stm;
@@ -484,6 +488,16 @@ class ASTGeneration(D96Visitor):
                 expr=expr.arr
             return ArrayCell(expr, listexp)
         return self.visit(ctx.exp7())
+    # #exp6: exp7 index_operator | exp7;
+    # def visitExp6(self, ctx: D96Parser.Exp6Context):
+    #     if ctx.getChildCount() == 2:
+    #         expr = self.visit(ctx.exp7(0))
+    #         listexp = self.visit(ctx.index_operator())
+    #         if(type(expr)==ArrayCell):
+    #             listexp=expr.idx+listexp
+    #             expr=expr.arr
+    #         return ArrayCell(expr, listexp)
+    #     return self.visit(ctx.exp7(0))
     #exp7: exp7 DOT (ID| func_call) | exp8;
     def visitExp7(self, ctx: D96Parser.Exp7Context):
         if ctx.getChildCount() == 3:
@@ -567,6 +581,29 @@ class ASTGeneration(D96Visitor):
     # sizearray: (DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO) ;
     # def visitSizearray(self, ctx: D96Parser.SizearrayContext):
     #     if ctx.DECIMAL_INTEGER_GT_ZERO(): 
+    #         return int(ctx.getChild(0).getText())
+    #     elif ctx.OCT_INTEGER_GT_ZERO(): 
+    #         return int(ctx.getChild(0).getText(),8)
+    #     elif ctx.HEX_INTEGER_GT_ZERO(): 
+    #         return int(ctx.getChild(0).getText(),16)
+    #     elif ctx.BIN_INTEGER_GT_ZERO(): 
+    #         return int(ctx.getChild(0).getText(),2)
+    def visitSizearray(self, ctx: D96Parser.SizearrayContext):
+        if ctx.OCT_INTEGER_GT_ZERO():
+            a = ctx.getChild(0).getText()
+            return eval(a[:1] + 'o' + a[1:])
+        return eval(ctx.getChild(0).getText())
+    # intlit: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER | DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO);
+    # def visitIntlit(self, ctx: D96Parser.IntlitContext):
+    #     if ctx.DECIMAL_INTEGER(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText()))
+    #     elif ctx.OCT_INTEGER(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText(),8))
+    #     elif ctx.HEX_INTEGER(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText(),16))
+    #     elif ctx.BIN_INTEGER(): 
+    #         return IntLiteral(int(ctx.getChild(0).getText(),2))
+    #     elif ctx.DECIMAL_INTEGER_GT_ZERO(): 
     #         return IntLiteral(int(ctx.getChild(0).getText()))
     #     elif ctx.OCT_INTEGER_GT_ZERO(): 
     #         return IntLiteral(int(ctx.getChild(0).getText(),8))
@@ -574,31 +611,10 @@ class ASTGeneration(D96Visitor):
     #         return IntLiteral(int(ctx.getChild(0).getText(),16))
     #     elif ctx.BIN_INTEGER_GT_ZERO(): 
     #         return IntLiteral(int(ctx.getChild(0).getText(),2))
-    def visitSizearray(self, ctx: D96Parser.SizearrayContext):
-        if ctx.DECIMAL_INTEGER_GT_ZERO(): 
-            return int(ctx.getChild(0).getText())
-        elif ctx.OCT_INTEGER_GT_ZERO(): 
-            return int(ctx.getChild(0).getText(),8)
-        elif ctx.HEX_INTEGER_GT_ZERO(): 
-            return int(ctx.getChild(0).getText(),16)
-        elif ctx.BIN_INTEGER_GT_ZERO(): 
-            return int(ctx.getChild(0).getText(),2)
-    # intlit: (DECIMAL_INTEGER| OCT_INTEGER| HEX_INTEGER| BIN_INTEGER | DECIMAL_INTEGER_GT_ZERO| OCT_INTEGER_GT_ZERO| HEX_INTEGER_GT_ZERO| BIN_INTEGER_GT_ZERO);
     def visitIntlit(self, ctx: D96Parser.IntlitContext):
-        if ctx.DECIMAL_INTEGER(): 
-            return IntLiteral(int(ctx.getChild(0).getText()))
-        elif ctx.OCT_INTEGER(): 
-            return IntLiteral(int(ctx.getChild(0).getText(),8))
-        elif ctx.HEX_INTEGER(): 
-            return IntLiteral(int(ctx.getChild(0).getText(),16))
-        elif ctx.BIN_INTEGER(): 
-            return IntLiteral(int(ctx.getChild(0).getText(),2))
-        elif ctx.DECIMAL_INTEGER_GT_ZERO(): 
-            return IntLiteral(int(ctx.getChild(0).getText()))
-        elif ctx.OCT_INTEGER_GT_ZERO(): 
-            return IntLiteral(int(ctx.getChild(0).getText(),8))
-        elif ctx.HEX_INTEGER_GT_ZERO(): 
-            return IntLiteral(int(ctx.getChild(0).getText(),16))
-        elif ctx.BIN_INTEGER_GT_ZERO(): 
-            return IntLiteral(int(ctx.getChild(0).getText(),2))
+        if ctx.OCT_INTEGER_GT_ZERO() or ctx.OCT_INTEGER():
+            octalnum = ctx.getChild(0).getText()
+            octalformat = octalnum[:1] + 'o' + octalnum[1:]
+            return IntLiteral(eval(octalformat))
+        return IntLiteral(eval(ctx.getChild(0).getText()))
         

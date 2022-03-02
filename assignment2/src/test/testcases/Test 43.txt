@@ -1,0 +1,26 @@
+
+        Class A : B{
+            $khang(){
+
+            {
+                    If ( a >= 5) { }
+                    Else {Break; }
+             }
+
+            {
+                    a = x + 10;
+                    a.method(arr[1][2][3], 5);
+            }
+
+            {
+                Foreach( i In (1*3) .. 10 By 5) {
+                    a = a + i;
+                    b = (b * 2) >= 100;
+                    Continue;
+               }
+            }
+               Break;
+               Return 2;
+            }
+        }
+        

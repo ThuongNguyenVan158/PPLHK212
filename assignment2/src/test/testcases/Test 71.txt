@@ -1,0 +1,13 @@
+
+        Class Shape {}
+        Class Polygon : Shape {
+            Var $a:Int = 1;
+            Var b:Float = 1.5;
+            draw() {
+                Var c:Array[Int,5];
+                Foreach(i In 1 .. 5) {
+                    c[i] = (i * i + 2*i - i) / 2 * i;
+                }
+            }
+        }
+        

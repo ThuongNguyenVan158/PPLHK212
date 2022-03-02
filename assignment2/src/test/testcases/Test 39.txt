@@ -1,0 +1,13 @@
+
+        Class A : B{
+            $khang(){
+               Foreach( x In True .. False By a[1][2]) {
+                    If ( a >= 5) { }
+                    Elseif ((a+b*c%d/e+arr[1][2]) == 12) { }
+                    Else {Break;}
+               }
+               Break;
+               Return "khangpro";
+            }
+        }
+        

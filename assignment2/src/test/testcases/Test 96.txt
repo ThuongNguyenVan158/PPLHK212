@@ -1,0 +1,9 @@
+
+                Class Program{
+                    Var a,b,$c : Array[String, 0b1001];
+                    test(x,y : Khang){
+                        (arr[1][2])[5] = arr[1][2][3][4];
+                        arr[1][2][3] = (x[4][5][6]);
+                    }
+                }
+                

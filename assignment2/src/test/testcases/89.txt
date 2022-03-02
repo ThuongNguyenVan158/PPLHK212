@@ -1,11 +1,1 @@
-Class Program{
-                    main(){
-                        Return 1;
-                        Return "dinh";
-                        Return True;
-                        Return a;
-                        Return Self;
-                        Return Null;
-                        Return Array(3,4,5);
-                    }
-                }
+Class Program {main(){Val Thai:Student=New Student(2010616); Thai.learn("Principle of programming Language");}}

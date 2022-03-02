@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(SV),[MethodDecl(Id(main),Instance,[],Block([Return(BinaryOp(&&,BinaryOp(||,BinaryOp(&&,Id(a),Id(b)),Id(c)),Id(d)))]))])])
+Program([ClassDecl(Id(Shape),[AttributeDecl(Static,ConstDecl(Id($numofShape),IntType,None)),AttributeDecl(Instance,VarDecl(Id(length),FloatType)),AttributeDecl(Instance,VarDecl(Id(width),FloatType))])])

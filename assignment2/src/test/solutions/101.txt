@@ -1,1 +1,1 @@
-A,$ID,_id,_id1,k19ID,89,_id,<EOF>
+Program([ClassDecl(Id(TestOperator),[MethodDecl(Id(main),Instance,[param(Id(a),IntType),param(Id(b),IntType),param(Id(x),ClassType(Id(Thuong))),param(Id(y),ClassType(Id(Thuong)))],Block([]))])])

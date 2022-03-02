@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Program),Id(sv),[AttributeDecl(Instance,VarDecl(Id(x),IntType,[ArrayCell(FieldAccess(FieldAccess(Self(),Id(h)),Id(k)),[IntLit(1)]),FieldAccess(Id(Vu),Id($Tho)),CallExpr(NewExpr(Id(Yeu),[Id(Vu),Id(Tho)]),Id(Vu),[FieldAccess(Self(),Id(Tho)),ArrayCell(Id(Tho),[IntLit(3000)])]),CallExpr(Id(Vu),Id($Yeu),[Id(Tho),NewExpr(Id(Very),[BinaryOp(+,Id(Much),IntLit(3000))])])]))])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([For(Id(x),BooleanLit(True),BooleanLit(False),BooleanLit(True),Block([])])]))])])

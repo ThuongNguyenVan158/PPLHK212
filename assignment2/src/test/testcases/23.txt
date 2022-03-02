@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var x:Int=(3-2+1*8%4/3)/10;
-                     }
+Class Shape {getArea(){x=y;}}

@@ -6,7 +6,7 @@
                 nty(){
                     Return;
                 }
-                Var x, y, z : Array[Int, 3];
+                Var x, y, z : Array[Int, 0xABC3];
                 Var q, w : Exp1 = New A(), New B();
                 Val a : A = New A();
             ##

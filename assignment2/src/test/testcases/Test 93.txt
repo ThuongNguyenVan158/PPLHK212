@@ -1,0 +1,6 @@
+ Class Pro3 {
+                    main() {
+                        Var a: Array[Int, 0b10101] = Array(0x1,1.2,a);
+                        Val b,c: Array[String, 012] = Array(b,c,d), "minh";
+                    }
+                }

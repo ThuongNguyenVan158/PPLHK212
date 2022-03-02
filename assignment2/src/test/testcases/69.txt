@@ -1,4 +1,1 @@
-
-                    Class Sv:BK{
-                        Var c:Array[Array[Int,2],2]=Array(Array(1,2),Array(3,4));
-                    }
+Class Shape {getArea(){Return x * y;}}

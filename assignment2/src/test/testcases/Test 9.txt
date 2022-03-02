@@ -1,0 +1,8 @@
+
+            Class Test : khang{
+                getMethod(a,b: Float; c: Int){
+                    Val a, b: Float;
+                }
+            }
+
+            

@@ -1,0 +1,15 @@
+ Class Program {
+                main() {{{}}}
+                Constructor(){
+                    Program::$main();
+                }
+            }
+            Class a:A{
+                self(){
+                    Return a.self();
+                }
+                Constructor(){
+                    If (New a()) {
+                    }
+                }
+            }

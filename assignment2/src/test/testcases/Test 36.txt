@@ -1,0 +1,11 @@
+
+        Class A{
+            $khang(){
+               a[1 >= 3][2 && 4] = (arr[1])[2];
+               Self.a = Self.b.c.d.methodDecl();
+               a = a.meow(a, 1+2);
+               Break;
+               Return "hahahaha";
+            }
+        }
+        

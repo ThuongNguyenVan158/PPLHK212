@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Program),[MethodDecl(Id(Test),Instance,[],Block([ConstDecl(Id(a),IntType,IntLit(5)),AssignStmt(Id(a),UnaryOp(-,IntLit(2))),AssignStmt(Id(b),BinaryOp(-,BinaryOp(+,IntLit(1),BinaryOp(*,IntLit(2),IntLit(5))),IntLit(6))),AssignStmt(Id(b),BinaryOp(==,Id(b),IntLit(5)))]))])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Instance,[],Block([ConstDecl(Id(x),IntType,IntLit(83)),ConstDecl(Id(y),IntType,IntLit(229))]))])])

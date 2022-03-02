@@ -1,9 +1,1 @@
-
-        Class TestOperator
-        {
-            main()
-            {
-               a[(a+x.test(2))*b::$abc(3+4)] = a[b[x]] +3*a[4]/3;
-            }
-        }
-        
+Class Program:Shape {main(){}}

@@ -1,0 +1,14 @@
+
+        Class A : B{
+            $khang(){
+
+            {
+                    If ( a >= 5) { }
+                    Elseif ((1 && 2) == 12) { }
+                    Else {Break; }
+             }
+               Break;
+               Return 2;
+            }
+        }
+        

@@ -1,5 +1,1 @@
-Class SV{
-                        Var a,$b,c,d:Int;
-                        Val a,$b,$c,d:Array[Int,5_2];
-                    }
-                    
+Class Shape {getArea(){Return x.x();}}

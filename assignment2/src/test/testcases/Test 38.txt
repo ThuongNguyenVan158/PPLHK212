@@ -1,0 +1,13 @@
+
+        Class A : B{
+            $khang(){
+               Foreach( i In (1*3) .. 10 By 5) {
+                    a = a + i;
+                    b = (b * 2) >= 100;
+                    Continue;
+               }
+               Break;
+               Return "khangpro";
+            }
+        }
+        

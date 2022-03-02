@@ -1,9 +1,1 @@
-
-            Class A : B{ }
-            Class B : A{ }
-            Class C {
-                Val a: Int;
-                Var b: Float;
-            }
-
-            
+Class Program {main(){If (True) {} Elseif (True) {}}}

@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Test),Id(khang),[AttributeDecl(Instance,ConstDecl(Id(khang),IntType,IntLit(1))),AttributeDecl(Static,ConstDecl(Id($x),IntType,IntLit(2))),AttributeDecl(Static,VarDecl(Id($b),StringType,StringLit(khang))),MethodDecl(Id(getMethod),Instance,[],Block([])),MethodDecl(Id($getMem),Static,[param(Id(a),IntType),param(Id(b),IntType)],Block([]))])])

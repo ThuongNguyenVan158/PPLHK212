@@ -1,0 +1,13 @@
+
+            Class Test : khang{
+                Val khang, $x: Int = 1, 2;
+                Var $b: String = "khang";
+                getMethod(){
+
+                }
+                $getMem(a, b: Int){
+
+                }
+            }
+
+            

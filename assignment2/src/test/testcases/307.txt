@@ -1,6 +1,6 @@
 
         Class Shape {
-            Var length,width: Int = 2,5;
+            Var length,width: Int = 2,0B1010101;
             $getArea() {
                 Return Self.length*Self.width;
             }

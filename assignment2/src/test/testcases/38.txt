@@ -1,6 +1,1 @@
-
-            Class A{ }
-            Class B{ }
-            Class C{ }
-            Class D{ }
-            
+Class Program {main(){If (True) {}}}

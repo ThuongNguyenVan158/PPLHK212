@@ -1,0 +1,6 @@
+
+                Class Program{
+                    Var a,b,$c : Int;
+                    Val d,$e: Float;
+                }
+                

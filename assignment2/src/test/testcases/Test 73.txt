@@ -1,0 +1,8 @@
+
+                Class Program{
+                    Var item:Array[Array[Array[Boolean,3],4],5];
+                    main() {
+                        Return item[1][2][3];
+                    }
+                }
+                

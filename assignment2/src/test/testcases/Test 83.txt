@@ -1,0 +1,11 @@
+Class a{
+            Val $instance: a = Self;
+            Var count: Int;
+            setCount(count:Int){
+                Self.count = count;
+            }
+            getCount(){
+                Return Self.count;
+            }
+        }
+        

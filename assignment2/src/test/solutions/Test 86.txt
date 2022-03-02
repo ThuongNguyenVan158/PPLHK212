@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Program),Id(Parent),[MethodDecl(Id(main),Static,[],Block([Break]))]),ClassDecl(Id(a),Id(A),[]),ClassDecl(Id(b),Id(B),[AttributeDecl(Instance,ConstDecl(Id(c),ClassType(Id(a)),NullLiteral()))])])

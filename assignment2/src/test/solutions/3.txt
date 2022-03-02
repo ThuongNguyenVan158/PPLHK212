@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Shape),Id(Vu),[MethodDecl(Id($getNumOfShape),Static,[],Block([]))])])
+Program([ClassDecl(Id(Shape),[]),ClassDecl(Id(Rectangle),[])])

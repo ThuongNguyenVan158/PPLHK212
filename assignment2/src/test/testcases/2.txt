@@ -1,5 +1,1 @@
-Class Shape:Vu {
-                        getArea() {
-
-                        }
-                    }
+Class Rectangle:Shape {}

@@ -1,0 +1,7 @@
+
+            Class Test : khang{
+                Val a, $b, c: Int;
+                Var $b, d: Float;
+                Val $c: Int = 10;
+            }
+            

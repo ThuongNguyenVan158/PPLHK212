@@ -1,0 +1,11 @@
+Class Test {
+            Val var : Float = Self.abc499;
+            Break_Out(a, b: Int) {
+                If (Self) {Continue;}
+                Elseif (Null) {Break;}
+                Elseif (True + False) {}
+                Else {}
+                Foreach (abc In "def" .. "ghi" By "abcxyz" + "dddd" / 34) {}
+                Val test, x, y : Int = 0b111010, 00, 0x0;
+            }
+        }

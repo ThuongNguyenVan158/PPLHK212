@@ -1,0 +1,20 @@
+
+            Class Test : khang{
+                Val khang, $x: Int = 1, 2;
+                Var $b: String = "khang";
+
+                $getShape(a,b: Float){
+                    Val a,b: Float = 1.96, 2.54;
+                    Return 5;
+                }
+
+                Destructor() {
+                    Return khang;
+                }
+
+                Constructor() {
+                    Return hahaha;
+                }
+            }
+
+            

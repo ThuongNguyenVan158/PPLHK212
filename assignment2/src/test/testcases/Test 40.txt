@@ -1,0 +1,13 @@
+
+        Class A : B{
+            $khang(){
+               Foreach( x In (100-20*5) .. arr.a.b By a[1][2][3]) {
+                    If ( a >= 5) { }
+                    Elseif ((1 && 2) == 12) { }
+                    Else {Break; }
+               }
+               Break;
+               Return "khangpro";
+            }
+        }
+        

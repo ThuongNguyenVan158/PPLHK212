@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var q,$s,c:Array[Int, 5]=Array(1, 5, 7, 12),Array("Kangxi", "Yongzheng", "Qianlong"),Array(12.34e-10,12.34E-10, 12.34, 32e+10);
-                     }
+Class Program {main(output:Int){}}

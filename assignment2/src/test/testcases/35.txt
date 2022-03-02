@@ -1,6 +1,1 @@
-Class Program:sv{
-                          $checkStmt(){
-                           Shape::$getNumOfShape(x,3+1,5/6);
-                           process.print(x,3+1,5/6);
-                        }
-                     }
+Class Program {main(){Val x:Int;}}

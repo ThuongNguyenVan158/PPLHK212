@@ -2,7 +2,7 @@
         Class Example2 {
             test(){
                 b[3] = Array(1,2,3);
-                a[3+x.foo(2)] = a[b[2]] +3;
+                a[3+x.foo(2)] = a[b[0b11]] +3;
             }
         }
         

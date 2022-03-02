@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(SV),[AttributeDecl(Instance,VarDecl(Id(a),BoolType,BinaryOp(||,BinaryOp(||,BinaryOp(&&,BinaryOp(||,BinaryOp(&&,BinaryOp(>,Id(a),Id(b)),BinaryOp(<,Id(c),Id(d))),BinaryOp(==,Id(a),Id(b))),BinaryOp(!=,Id(e),Id(d))),BinaryOp(>=,Id(a),Id(b))),BinaryOp(>=,Id(c),Id(d)))))])])

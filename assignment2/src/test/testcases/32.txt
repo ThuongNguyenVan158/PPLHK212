@@ -1,8 +1,1 @@
-Class Program:sv{
-                          $checkStmt(){
-                           x=3;
-                           x[1][2][3]=3;
-                           x.y.z[1]=m::$z();
-                           x::$s=x.l.y();
-                        }
-                     }
+Class Shape {getArea(){Return True;}}

@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Test),Id(khang),[MethodDecl(Id(getMethod),Instance,[param(Id(a),FloatType),param(Id(b),FloatType),param(Id(c),IntType)],Block([ConstDecl(Id(a),FloatType,None),ConstDecl(Id(b),FloatType,None)]))])])
+Program([ClassDecl(Id(Program),[MethodDecl(Id(main),Static,[],Block([Return(BooleanLit(True))]))])])

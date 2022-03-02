@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Shape),Id(Vu),[MethodDecl(Id(Constructor),Instance,[],Block([])),MethodDecl(Id(Destructor),Instance,[],Block([]))])])
+Program([ClassDecl(Id(Shape),[]),ClassDecl(Id(Rectangle),Id(Shape),[]),ClassDecl(Id(Circle),Id(Shape),[])])

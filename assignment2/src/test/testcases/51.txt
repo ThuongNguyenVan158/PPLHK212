@@ -1,16 +1,1 @@
-
-            Class Program {
-                main() {
-                    Val a: Int;
-                    Var b: Float;
-               }
-            }
-
-            Class test {
-                main() { }
-                main(a,b: Int){
-                    Val a: String;
-                }
-            }
-
-            
+Class Shape {getArea(){Val x: Int; Var y: Bool; Val z: Float;}}

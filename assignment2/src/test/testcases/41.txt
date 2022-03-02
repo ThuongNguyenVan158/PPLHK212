@@ -1,7 +1,1 @@
-
-            Class Test : khang{
-                Val a, $b, c: Int;
-                Var $b, d: Float;
-                Val $c: Int = 10;
-            }
-            
+Class Program {main(){If (True) {} Elseif (True) {} Elseif (False) {} Else {}}}

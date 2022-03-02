@@ -1,0 +1,7 @@
+ Class Pro3 {
+                    $main() {
+                        a = New b();
+                        b = a::$foo();
+                        c = b::$a;
+                    }
+                }

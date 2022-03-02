@@ -1,0 +1,6 @@
+   Class a{
+            main(){
+                Return 1+ 2. * 0x20 % "Hien" || Null == Self +. True - -False >= !021 / a::$instance.count(1) --- Array(1,0b1101);
+            }
+        }
+        

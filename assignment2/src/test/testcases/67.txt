@@ -1,5 +1,1 @@
-
-                    Class Sv:BK{
-                        Var a:Boolean=True;
-                        Val $b:Boolean=False;
-                    }
+Class Shape {getArea(){Return x + y;}}

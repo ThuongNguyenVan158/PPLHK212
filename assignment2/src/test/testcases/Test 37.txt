@@ -1,0 +1,12 @@
+
+        Class A : B{
+            $khang(){
+               Foreach( i In 1 .. 10) {
+                    a = a + 1;
+                    b = b * 2;
+               }
+               Break;
+               Return "khangpro";
+            }
+        }
+        

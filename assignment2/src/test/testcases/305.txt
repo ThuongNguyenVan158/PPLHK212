@@ -3,7 +3,7 @@
         {
             factorial(n : Int){
                 If (n == 0) {
-                    Return 1;
+                    Return 0x1223;
                 }
                 Else{
                      Return n * Example1.factorial(n - 1);

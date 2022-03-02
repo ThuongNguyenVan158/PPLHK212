@@ -1,4 +1,1 @@
-
-                    Class Sv:BK{
-                        Var c:Array[String,2]=Array("dinh","1913114");
-                    }
+Class Shape {getArea(){Return x - y;}}

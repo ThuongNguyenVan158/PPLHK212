@@ -1,7 +1,1 @@
-
-            Class Test : khang{
-                Val khang, $x, num_of_shape: Int = 1, 2, 3;
-                Var $b: Array[Int,3] = Array(1,2,3);
-            }
-
-            
+Class Program {main(){Foreach (x In True..False By True) {}}}

@@ -1,13 +1,1 @@
-
-            Class Program {
-               main() {
-                Val a: Int;
-                Var b: Float;
-               }
-
-               main(a,b: Int){
-                Return "khang";
-               }
-            }
-
-            
+Class Program {$main(x:Int){Return True;}}

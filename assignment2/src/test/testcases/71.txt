@@ -1,2 +1,1 @@
-Class SV:sv{
-                    }
+Class Shape {getArea(){Return x % y;}}

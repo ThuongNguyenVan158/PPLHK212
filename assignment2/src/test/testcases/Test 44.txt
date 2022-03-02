@@ -1,0 +1,29 @@
+
+            Class Node{
+            Var value: Int=0;
+            Var nextNode: Node=Null;
+            Constructor(value:Int;next:Node){
+                Self.value=value;
+                Self.Node=next;
+            }
+            Constructor(value:Int){
+                Self.value=value;
+            }
+        }
+
+            Class LinkList{
+                Var head,tail: Node = Null,Null;
+                Var length: Int=0;
+                isExist(el:Int){
+                    Var temp: Node =head;
+                    Foreach(i In 0 .. Self.length-1){
+                        If(temp.value==el){
+                            Return 1;
+                        }
+                        temp=temp.nextNode;
+                    }
+                    Return 0;
+                }
+            }
+
+        

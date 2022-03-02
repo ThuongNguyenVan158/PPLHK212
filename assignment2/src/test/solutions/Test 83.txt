@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(a),[AttributeDecl(Static,ConstDecl(Id($instance),ClassType(Id(a)),Self())),AttributeDecl(Instance,VarDecl(Id(count),IntType)),MethodDecl(Id(setCount),Instance,[param(Id(count),IntType)],Block([AssignStmt(FieldAccess(Self(),Id(count)),Id(count))])),MethodDecl(Id(getCount),Instance,[],Block([Return(FieldAccess(Self(),Id(count)))]))])])

@@ -1,5 +1,1 @@
-
-                    Class Program:sv{
-                       Val x,y,$z:Vu=New Vu(),New Yeu(x,x+y,New Hey()),New Tho();
-                     }
-                     
+Class Shape {getArea(){Var x:Int;}}

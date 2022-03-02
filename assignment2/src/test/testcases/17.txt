@@ -1,3 +1,1 @@
-Class Program:sv{
-                        Var q,w,e,r,t,y,u,i,o,p:Float=12.34e-10,12.34E-10, 12.34, 32e+10,.23e-2,1_234.567,12.000000000,12.100000,12.1E-001,12.1E-0000;
-                    }
+Class Shape {getArea(output,input:Int){}}

@@ -1,0 +1,17 @@
+
+                    Class Program:sv{
+                       Val x,y,$z: Khang = 01234, 0b1111100, a.b.c.d;
+                       Test() {
+                            If( (a <= b) == (b>=c)){
+                                Break;
+                                Return a;
+                            }
+                            Elseif( (a+b) == 500){
+                                Val a: Khang = New Khang(Null);
+                            }
+                            Else {
+                                Continue;
+                            }
+                       }
+                     }
+                     

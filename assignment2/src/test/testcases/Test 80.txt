@@ -1,0 +1,5 @@
+
+                Class Program{
+                    Var a,b,$c : Array[Int, 3] = Array(),Array(1,2,3),Array(1.,2.,3.);
+                }
+                
