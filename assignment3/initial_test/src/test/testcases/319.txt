@@ -1,0 +1,15 @@
+
+        Class main {
+            Var numOfShape : Int = 1;
+            Contructor(x: Int){
+                Self.numOfShape = 1;
+            }
+        }
+        Class Program{
+            main(){
+                Var x: main = New main(1);
+                Var z: Boolean = x.numOfShape;
+                Var y : Int = numOfShape + 1;
+            }
+        }
+        

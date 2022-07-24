@@ -1,0 +1,12 @@
+
+        Class main {
+            Val numOfShape : Int;
+        }
+        Class Program{
+            main(){
+                Var x: main = New main();
+                Var z: Float = x.numOfShape1;
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

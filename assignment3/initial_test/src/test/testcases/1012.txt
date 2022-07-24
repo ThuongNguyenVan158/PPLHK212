@@ -1,0 +1,10 @@
+Class Rectangle {
+        Var x:Int=Array(2,3,1)[2.3];
+
+        y(){
+            Var x:Int=3;
+            Return x;
+        }
+        Val z:Int=Self.y();
+
+    }

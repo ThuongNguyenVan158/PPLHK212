@@ -1,0 +1,18 @@
+
+        Class Program {
+            Val numOfShape : Int = 1;
+            Val x : Int = Self.numOfShape + 1;
+            x(){
+                Var x: Int =1;
+                Return 1;
+                {
+                Return 2;
+                }
+            }
+            main(){
+                Var x :Int = 1*2 + True;
+                Return;
+            }
+          
+                
+        }

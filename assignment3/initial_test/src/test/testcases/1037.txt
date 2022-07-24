@@ -1,0 +1,7 @@
+ Class hey{
+                        Val x:Int=20;
+                        foo1(){
+                            Val x:Array[Array[Int,2],1]=Array(Array(2.0,4.5));
+                        }
+                    }
+                   

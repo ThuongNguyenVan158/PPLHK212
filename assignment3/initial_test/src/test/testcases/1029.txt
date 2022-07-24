@@ -1,0 +1,17 @@
+Class Rectangle {
+                            Val x:Int=20;
+                            Var y,z:String="sad", "fun";
+                            hey(){
+                                If ((!(x<20)&&((2*x-3)<20))||False){
+
+                                }
+
+                                If (z==.y){
+
+                                }Elseif (4+5){
+
+                                    }
+                            }
+                        }
+
+                        

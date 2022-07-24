@@ -1,0 +1,4 @@
+Class Rectangle {
+        Var x,x:Int=3,6;
+
+    }

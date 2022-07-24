@@ -1,0 +1,16 @@
+
+        Class SinhVien {
+            getTBTL(id:Int;name:String){
+                a=b+c;
+                c=2*3;
+                b=3/4;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

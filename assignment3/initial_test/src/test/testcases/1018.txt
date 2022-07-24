@@ -1,0 +1,8 @@
+Class Rectangle {
+        hey(){
+
+        }
+        hey(x:Int;y:Int){
+
+        }
+    }

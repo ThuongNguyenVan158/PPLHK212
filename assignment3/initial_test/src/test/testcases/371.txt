@@ -1,0 +1,17 @@
+
+        Class Test {
+            main()
+            {
+            Var A, B, temp : Test = New A(), New B(), New C();
+
+            Other.prVarf("Please enter the 1st number : ");
+            }
+            }
+                  Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

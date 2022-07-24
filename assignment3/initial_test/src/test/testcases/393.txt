@@ -1,0 +1,21 @@
+
+        Class Integer{
+            Var a: Array[Int,5]=Array(2,6,9,7,5);
+            findMax(){
+           
+            Foreach(i In 0 .. 10 By 1){
+                If(a[i]<min) {
+                    min=a[i];
+                }
+            }
+            Return min;
+           }
+    }
+          Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

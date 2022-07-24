@@ -1,0 +1,12 @@
+ Class hey{
+                                Constructor(x:String){
+                                    Return;
+                                }
+                                Destructor(){
+                                    ## Return 3;##
+                                }
+                                main(){
+                                    Return 3;
+                                }
+                            }
+                               

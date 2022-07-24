@@ -1,0 +1,4 @@
+Class main {
+             Val $numOfShape : Int = 2;
+            Val immuAttribute : Int =3;
+        }

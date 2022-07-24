@@ -1,0 +1,11 @@
+Class Rectangle {
+
+                    hey(x:Int){
+                        Var k:Int=4;
+                        If (m>3){
+                            Return 2;
+                        }
+                    }
+            }
+
+            

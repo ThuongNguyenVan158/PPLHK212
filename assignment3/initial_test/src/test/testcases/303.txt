@@ -1,0 +1,31 @@
+
+        Class main {
+            Var numOfShape : Int = 1;
+            Var num1 : Int = Self.numOfShape;
+            Var num2 : Int = Self.numOfShape + Self.num1;
+            Val x: Int = 1;
+            Val y: Int = 1.2 + Self.x;
+            Var num3 : Int = numOfShape + Self.num3;
+            A(a,b : Int){
+                Var x: Int = 1;
+                Var y: Int =x;
+                Return x+y*a;
+                }
+        }
+        Class Program : main{
+            Val numOfShape : Int = 1;
+            Val x : Int = Self.numOfShape + 1;
+            x(){
+                Var x: Int =1;
+                Return 1;
+                {
+                Return 2;
+                }
+            }
+            main(){
+
+            }
+          
+                
+        }
+        

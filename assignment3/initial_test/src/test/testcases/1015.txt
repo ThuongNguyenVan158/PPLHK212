@@ -1,0 +1,5 @@
+Class Rectangle {
+        $hey(){
+        }
+        Var x:Int=Rectangle::$hey();
+    }

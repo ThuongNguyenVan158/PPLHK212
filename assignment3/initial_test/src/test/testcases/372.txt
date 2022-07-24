@@ -1,0 +1,17 @@
+
+        Class Test {
+            main(){
+                a = Other.b() + Other.c() + Other.d();
+                Other.prVar(a);
+                a = a / Other.sum(a,b) + Other.sub(a,b);
+                }
+
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

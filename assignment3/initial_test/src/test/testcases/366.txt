@@ -1,0 +1,23 @@
+
+        Class XXX { }
+        Class main : XXX {
+            ## Self is a line comment
+            ##
+            
+            method1(a: Int;a,b: String){
+                Var b : Int=2;
+                Self.myPI = 3.14;
+                value = x.foo(5);
+                l[3] = value / 2;
+                r = 2.0;
+                s = r*r*Self.myPI;
+                Return 1;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }

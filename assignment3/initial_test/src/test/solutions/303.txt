@@ -1,0 +1,1 @@
+Type Mismatch In Constant Declaration: ConstDecl(Id(y),IntType,BinaryOp(+,FloatLit(1.2),FieldAccess(Self(),Id(x))))

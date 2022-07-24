@@ -1,0 +1,13 @@
+
+        Class XXX { }
+        Class main {
+        }
+        Class YYY : zzz{
+
+        }
+        Class Program{
+            main(){
+
+            }
+        }
+        

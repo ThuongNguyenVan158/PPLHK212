@@ -1,0 +1,21 @@
+
+        Class CallbackHell
+        {
+            typeString(){
+                Return "string";
+            }
+            typeInt(){
+                Return 1;
+            }
+            typeFloat(){
+                Return 1.0;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

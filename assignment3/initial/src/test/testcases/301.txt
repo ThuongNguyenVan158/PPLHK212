@@ -1,0 +1,4 @@
+Class Program  {
+             Var numOfShape : Int = 1;
+            A(x,y : Int){}
+        }

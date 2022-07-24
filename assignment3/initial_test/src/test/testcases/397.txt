@@ -1,0 +1,22 @@
+
+        Class Shape {
+           Contructor(){}
+        }
+        Class Rectangle : Shape {
+           getArea(){
+            x.b[2] = x.m()[3];
+            }
+        }
+        Class Triangle : Shape {
+            getArea(){
+            Return Self.length*Self.width / 2;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

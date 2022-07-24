@@ -1,0 +1,11 @@
+Class main {
+            Var $a,b: Int =1,2;
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

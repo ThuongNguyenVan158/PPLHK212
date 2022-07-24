@@ -1,0 +1,28 @@
+
+        Class Test {
+            print(x: Int)
+            {
+                A.x();
+            }
+            main()
+            {
+                Val x: Int= 100+1;
+                Foreach( h In 1 .. x+1 By x-1)
+                {
+                    If(x%2 == 0)
+                    {
+                        Self.print(x);
+                    }
+                    Else {Continue;}
+                    Break;
+                }
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

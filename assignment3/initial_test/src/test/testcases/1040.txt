@@ -1,0 +1,5 @@
+ Class hey{
+                            Var k:Array[Int,2]=Array("sds",4);
+
+                        }
+                       

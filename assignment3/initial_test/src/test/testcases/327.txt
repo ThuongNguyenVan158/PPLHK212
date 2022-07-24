@@ -1,0 +1,20 @@
+
+        Class A{}
+        Class Program {
+            main()
+            {
+                Var i : Int;
+                i = 8;
+                A.printf("Factorial of the number is ", i, A.factorial(i));
+                Return 0;
+            }
+            factorial(i : Int)
+            {
+                If(i < 2)
+                {
+                    Return 1;
+                }
+                Return i * A.factorial(i - 1);
+                }
+            }
+        

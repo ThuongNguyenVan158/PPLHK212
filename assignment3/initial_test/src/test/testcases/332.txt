@@ -1,0 +1,25 @@
+
+        Class Test {
+            Compare(s1,s2: String){
+                Var a: String;
+                If(s1 ==. s2)
+                {
+                    a =s1+.s2;
+                }
+                Else {
+                    a=s2+.s1;
+                }
+            }
+            main(){
+                    Test.Compare("a", "b");
+                    Return 0;
+                }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

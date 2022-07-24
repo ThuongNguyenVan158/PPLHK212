@@ -1,0 +1,16 @@
+
+        Class Operator
+        {
+            main()
+            {
+                a[(3+x.foo(2))/5*3-25] = a[b[2]] +3*a[4]/3;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

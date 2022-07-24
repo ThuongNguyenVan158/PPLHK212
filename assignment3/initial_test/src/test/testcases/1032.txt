@@ -1,0 +1,10 @@
+Class Rectangle {
+
+
+                                        Var y,z:String="sad", "fun";
+                                        foo(x:Int;y:Float){
+                                            y[1]=3;
+                                        }
+                                    }
+
+                                    

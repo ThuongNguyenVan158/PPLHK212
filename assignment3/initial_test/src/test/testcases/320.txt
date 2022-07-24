@@ -1,0 +1,15 @@
+
+        Class main {
+            Var numOfShape : Float = 1;
+            Contructor(){
+                Self.numOfShape = "a";
+            }
+        }
+        Class Program{
+            main(){
+                Var x: main = New main();
+                Var z: Int = x.numOfShape;
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

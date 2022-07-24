@@ -1,0 +1,29 @@
+
+         Class Point {
+            Var x,y,z: Int;
+            Contructor(x:Int;y:Int;z:Int)
+            {
+                Self.x = x;
+                Self.y = y;
+                Self.z = z;
+            }
+            Sum()
+            {
+                Return Self.x+Self.y+Self.z;
+            }
+            main()
+            {
+                Var b: Point = New Point(1,2,4);
+                b.Sum();
+                Return 0; 
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+
+        

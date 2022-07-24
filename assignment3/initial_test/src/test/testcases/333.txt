@@ -1,0 +1,24 @@
+
+        Class Student {
+            Val id : Int;  
+            Var salary: Int; 
+            Val name : String; 
+            $getName()
+            {
+                Return Self.name;
+            }
+        }
+        Class Score : Student{
+            Val idScore : Int;
+            Run(){
+                Student :: $getName();
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

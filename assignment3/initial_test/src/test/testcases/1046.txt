@@ -1,0 +1,10 @@
+ Class hey{
+                            Var k:Int=3;
+                                Val $x:Int=4;
+                                main(){
+                                    Var m:hey=New hey();
+                                    k=hey::$x;
+                                    Return k;
+                                }
+                            }
+                               

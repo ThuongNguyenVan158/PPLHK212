@@ -1,0 +1,15 @@
+
+        Class Program:sv{
+            main(){
+                    {
+                        If(a){}
+                        Elseif(b){}
+                        Elseif(c){}
+                        {
+                            a = 1;
+                            Return a;
+                        }
+                    }
+                }
+            }
+       

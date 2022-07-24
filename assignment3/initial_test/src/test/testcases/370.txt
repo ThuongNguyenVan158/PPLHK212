@@ -1,0 +1,14 @@
+
+        Class Test {
+                main(){
+                    A.call("alo");
+                }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

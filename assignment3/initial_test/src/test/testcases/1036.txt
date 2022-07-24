@@ -1,0 +1,15 @@
+Class Rectangle {
+
+
+                                                        Var y,z:String="sad", "fun";
+                                                        foo(x:Int){
+
+                                                        }
+                                                        foo1(){
+                                                            Var t:Rectangle=New Rectangle();
+                                                            ## Var x:Int=4; ##
+                                                            Var m:String=z.y;
+                                                        }
+                                                    }
+
+                                                    

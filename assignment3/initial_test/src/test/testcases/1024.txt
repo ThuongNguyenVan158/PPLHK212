@@ -1,0 +1,8 @@
+Class Rectangle {
+                    Var m:Int=4;
+                    hey(x:Int){
+                        Var k:Int=New Rectangle().m();
+                    }
+            }
+
+            

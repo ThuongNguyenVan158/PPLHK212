@@ -1,0 +1,27 @@
+
+        Class Parent {
+            Var p : Int;
+        }
+        Class Child : Parent {
+            Var c: Array[Int, 5];
+            Contructor()
+            {
+                Foreach(i In 0 .. 5)
+                {
+                    Self.c[i] = i*i;
+                }
+            }
+            Detructor(){
+
+            }
+            print(){
+                Return "Hihi";
+            }
+        }
+        Class Program{
+            Var a : Child = New Child();
+            main(){
+
+            }
+        }
+        

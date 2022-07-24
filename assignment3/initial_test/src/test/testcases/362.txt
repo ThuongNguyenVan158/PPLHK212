@@ -1,0 +1,16 @@
+
+        Class Shape:Shape {
+            Val $numOfShape,numOfShape: Int=1,2;
+            Var x: Float;
+            $getNumOfShape() {
+                Return hey::$numOfShape;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

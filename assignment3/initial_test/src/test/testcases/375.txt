@@ -1,0 +1,11 @@
+
+        Class Vehicle
+        {
+           Var a: Int = 1;
+            hey(){
+                x ="accc";
+            }
+        }
+
+        
+        

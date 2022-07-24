@@ -1,0 +1,8 @@
+ Class hey{
+                                Constructor(x:String){
+                                }
+                                main(){
+                                    Var x:hey=New hey(4);
+                                }
+                            }
+                               

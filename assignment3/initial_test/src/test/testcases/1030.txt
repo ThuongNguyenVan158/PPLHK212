@@ -1,0 +1,12 @@
+Class Rectangle {
+                                Var x:Int=20;
+                                Var y,z:String="sad", "fun";
+                                hey(){
+                                    Foreach (x In 5.1 .. 2 By 2) {
+
+                                    }
+
+                                }
+                            }
+
+                            

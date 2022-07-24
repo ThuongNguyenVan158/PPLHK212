@@ -1,0 +1,5 @@
+ Class hey{
+                            Var k:Float=3;
+                            Val x: Int=k-1;
+                        }
+                       

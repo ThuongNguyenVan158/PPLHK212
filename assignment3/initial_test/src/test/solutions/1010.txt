@@ -1,0 +1,1 @@
+Type Mismatch In Statement: VarDecl(Id(x),ArrayType(1,ArrayType(2,IntType)),[[IntLit(1),IntLit(3)],[IntLit(1),IntLit(2)]])

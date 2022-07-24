@@ -1,0 +1,23 @@
+
+        Class Callback
+        {
+            main(){
+                If(1){
+                    If(1){
+                        If(1){
+                            If(1){
+                                Return 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

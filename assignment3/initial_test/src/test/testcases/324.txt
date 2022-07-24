@@ -1,0 +1,20 @@
+
+        Class Test {
+            a(){
+
+            }
+            a(a,b,c : Array[Int, 3]; d : Array[Float,3]){
+
+            }
+            Var1(a: Int){
+
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

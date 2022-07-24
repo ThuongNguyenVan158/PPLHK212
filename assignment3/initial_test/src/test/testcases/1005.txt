@@ -1,0 +1,10 @@
+Class Rectangle{
+         hey(){
+            Var My1stCons: Int = 1 + 5;
+            Val My1stConas:Int=6;
+            My1stConas=4;
+
+         }
+
+    }
+

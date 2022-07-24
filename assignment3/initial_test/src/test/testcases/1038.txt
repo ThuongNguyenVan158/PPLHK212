@@ -1,0 +1,29 @@
+ Class hey{
+                        Val x:Int=20;
+                        foo1(){
+                            Var i:Int;
+                            Foreach (i In 1 .. 5 By 1){
+                                If ( i==3){
+                                    Break;
+                                }Else{
+                                    If ((x+1)!=i){
+                                        Continue;
+                                    }
+
+                                }
+                            }
+
+                            If ( i==3){
+
+                                }Else{
+                                    If ((x+1)!=i){
+                                        Foreach (i In 1 .. 5 By 1){
+
+                                        }
+                                        Continue;
+                                    }
+
+                                }
+                        }
+                    }
+                   

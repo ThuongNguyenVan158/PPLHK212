@@ -1,0 +1,17 @@
+Class Rectangle {
+
+
+                                    Var y,z:String="sad", "fun";
+                                    foo(x:Int;y:Float){
+                                        Return x;
+                                    }
+                                    hey(){
+
+                                        Var k: Rectangle=New Rectangle();
+                                        k.foo(4,5);
+                                    }
+
+
+                                }
+
+                                

@@ -1,0 +1,9 @@
+Class Rectangle {
+                        hey(){
+                            Val x:Int=3;
+                            x=10;
+
+                        }
+                    }
+
+                    

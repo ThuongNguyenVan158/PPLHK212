@@ -1,0 +1,16 @@
+
+        Class Operator
+        {
+            main()
+            {
+                Return ((1>=2));
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

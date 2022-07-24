@@ -1,0 +1,21 @@
+
+        Class Ulities{
+           findMax(){
+                Var max,max1:Int=list[0], list[0];
+                Foreach(i In 0 .. 10 By 1){
+                    If(list[i]>max) {
+                        max=list[i];
+                        max1=max;
+                    }
+                }
+                Return Array(max,max1);
+           }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

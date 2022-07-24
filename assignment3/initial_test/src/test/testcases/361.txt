@@ -1,0 +1,23 @@
+
+        Class XXX { }
+        Class main : XXX {
+            Var a: Boolean = True;
+            Var a,b : Int=1,1;
+            method(a : Int; a,b: Boolean){
+                If(True)
+                    {
+                        Return "It's true";
+                    }
+                Else {
+                        Return "It's not true";
+                    }
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

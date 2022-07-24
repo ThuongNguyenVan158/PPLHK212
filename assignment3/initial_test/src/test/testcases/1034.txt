@@ -1,0 +1,13 @@
+Class Rectangle {
+
+
+                                                Var y,z:String="sad", "fun";
+                                                foo(x:Int){
+
+                                                }
+                                                foo1(){
+                                                    Var m:String=Self.foo(3);
+                                                }
+                                            }
+
+                                            

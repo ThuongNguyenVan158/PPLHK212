@@ -1,0 +1,13 @@
+
+        Class SinhVien:BK {
+            Var test: Boolean = !True;
+            Var test1: String = "abc";
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

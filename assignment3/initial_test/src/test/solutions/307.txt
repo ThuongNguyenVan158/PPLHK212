@@ -1,0 +1,1 @@
+Type Mismatch In Statement: VarDecl(Id(z),FloatType,FieldAccess(Id(x),Id(numOfShape)))

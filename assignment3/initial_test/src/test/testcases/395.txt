@@ -1,0 +1,20 @@
+
+        Class Shape {
+            Var width,length:Array[Array[Int,2],2] = Array(Array(5,6), Array(2*3,4*6)), Array(Array(2,3),Array(a&&b));
+            $getNumOfShape() {
+                If(width[1][2]*length[12][2]>10)
+                {
+                    Foreach (x In 5 .. 2) {
+                    
+                    }
+                }
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

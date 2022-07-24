@@ -1,0 +1,22 @@
+
+        Class Shape {
+            Var length,width : Float;
+           getArea() {}
+            Shape(length,width : Int){
+                Self.length = length;
+                Self.width = width;
+            }
+        }
+        Class Rectangle : Shape {
+            getArea(){
+                Return Self.length*Self.width;
+            }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

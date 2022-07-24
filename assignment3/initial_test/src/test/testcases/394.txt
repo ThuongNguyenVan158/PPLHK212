@@ -1,0 +1,26 @@
+
+        Class ArrayList{
+            Val a, b: Array[Array[String,3],2] = Array(1,2,3), Array("$abc", 0x123, 0b101);
+            Var c: Int = a[0] + b[0];
+            $GETsHAPE(){
+                Foreach(i In 1 .. 2){
+                    Foreach(j In 1 .. 3){
+                    If(a[i][j]>0)
+                    {
+                        Out.Print("Duong");
+                    }
+                    Else{
+                        Out.Print("am");
+                    }
+                }
+            }
+        }
+        }
+              Class Program{
+            main(){
+               
+                Var z: Int = "x.numOfShape";
+                Var y : Int = x.numOfShape + 1;
+            }
+        }
+        

@@ -1,0 +1,8 @@
+Class Rectangle {
+        Val hey:Int=1;
+         hey(x:Int;y:Int){
+            Return "sds";
+         }
+        Var x:Float=Self.hey(4,6);
+    }
+
