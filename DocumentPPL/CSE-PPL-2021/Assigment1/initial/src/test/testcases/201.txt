@@ -1,0 +1,6 @@
+class ABC { 
+    Var $1d : Int = 0;
+    $GetId(){
+        return $1d;
+    }
+}

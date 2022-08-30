@@ -1,0 +1,11 @@
+
+            void main(){return;}
+            int foo(int a, int b){
+                {
+                    int a;
+                    int b;
+                    int c;
+                    int c;
+                }
+            }
+        

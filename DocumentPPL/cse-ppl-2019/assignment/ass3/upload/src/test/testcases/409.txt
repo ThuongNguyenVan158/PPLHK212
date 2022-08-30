@@ -1,0 +1,10 @@
+
+            void main(){return;}
+            int foo(int a, int b){
+                int foo;
+                int foo1;
+                return a;
+            }
+            int foo(int a, int b){}
+            int foo(){}
+        

@@ -1,0 +1,9 @@
+
+            void main(int e){return;}
+            int foo(int a, int b, int e){
+                int main;
+                int x;
+                int x;
+                return 1;
+            }
+        

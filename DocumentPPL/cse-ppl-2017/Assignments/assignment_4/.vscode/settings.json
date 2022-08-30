@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./ass4/src/main/mp/utils",
+        "./ass4/src/main/mp/checker"
+    ]
+}

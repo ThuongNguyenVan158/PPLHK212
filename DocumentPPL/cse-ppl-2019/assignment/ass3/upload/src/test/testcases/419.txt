@@ -1,0 +1,17 @@
+
+            int main(int b){
+                return 1;
+            }
+            int f(){
+                {
+                    int a;
+                    a = 1;
+                    a = a * a;
+                }
+                {
+                    a * a;
+                }
+                int c;
+                return 1;
+            }
+        
